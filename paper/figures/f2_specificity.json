@@ -1,0 +1,29 @@
+{
+ "item": "F2",
+ "script": "scripts/figs/f2_specificity.py",
+ "outputs": [
+  "paper/figures/f2_specificity.pdf"
+ ],
+ "generated": "2026-10-11",
+ "verified_keys_used": {
+  "h2.M1.A": "verified",
+  "h2.M1.A_B1": "verified",
+  "h2.M1.A_B2": "verified",
+  "h2.M1.A_nolg": "verified",
+  "h2.M2.A": "verified",
+  "h2.M2.A_nolg": "verified",
+  "m3.*": "pending"
+ },
+ "verified_keys_missing": [],
+ "input_files": [
+  "kaggle/h2_spec_a/matches.json",
+  "results/VERIFIED.json",
+  "results/analysis/h2/h2.json",
+  "results/analysis/m2/h2.json",
+  "results/raw/*/results/P4_<M>_ipdev_clean*/surprise.npz, ..._<edit>-mid_s<k>/surprise.npz (via symlink dir)"
+ ],
+ "notes": [
+  "Panel (a) arrays recomputed from raw runs with the frozen analysis functions (scripts/run_analysis.h2_stage logic, event-aligned max, mid, tie-half not needed)",
+  "B1/B2/B3 CIs and B3 A from results/analysis/h2/h2.json (no VERIFIED key); M3 pending"
+ ]
+}

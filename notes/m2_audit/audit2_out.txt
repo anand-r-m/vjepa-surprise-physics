@@ -1,0 +1,45 @@
+===== M1 per block tiehalf {np.str_('O1'): 0.758, np.str_('O2'): 0.817, np.str_('O3'): 0.85}
+feat shape (360, 17, 8, 1024)  pooled-feat L2 norm per tubelet mean 17.77563  mean |g| 0.33658755
+ C= 2 featPersistence acc 0.322  featNorm acc 0.194  corr(S,persist) -0.66 corr(S,norm) -0.78  S-acc 0.344
+ C= 4 featPersistence acc 0.572  featNorm acc 0.203  corr(S,persist) -0.70 corr(S,norm) -0.83  S-acc 0.769
+ C= 6 featPersistence acc 0.681  featNorm acc 0.175  corr(S,persist) -0.59 corr(S,norm) -0.81  S-acc 0.792
+ C= 8 featPersistence acc 0.794  featNorm acc 0.153  corr(S,persist) -0.65 corr(S,norm) -0.76  S-acc 0.794
+ C=10 featPersistence acc 0.678  featNorm acc 0.175  corr(S,persist) -0.44 corr(S,norm) -0.68  S-acc 0.789
+ pooled feature norm acc(imp>pos) 0.192
+ corr S with pooled-norm -0.9305358091586892
+ windows tied (<1e-4) per pair: mean 6.405555555555556
+ post-divergence mean S(imp)-S(pos): mean 0.0031757804  frac>0 0.8111111111111111 n 180
+   C 2 post-div frac imp>pos 0.3333333333333333
+   C 4 post-div frac imp>pos 0.7722222222222223
+   C 6 post-div frac imp>pos 0.8
+   C 8 post-div frac imp>pos 0.7833333333333333
+   C 10 post-div frac imp>pos 0.7944444444444444
+===== M2 per block tiehalf {np.str_('O1'): 0.483, np.str_('O2'): 0.408, np.str_('O3'): 0.517}
+feat shape (360, 17, 8, 1024)  pooled-feat L2 norm per tubelet mean 18.622288  mean |g| 0.32029653
+ C= 2 featPersistence acc 0.2  featNorm acc 0.244  corr(S,persist) -0.76 corr(S,norm) -0.77  S-acc 0.658
+ C= 4 featPersistence acc 0.106  featNorm acc 0.269  corr(S,persist) -0.79 corr(S,norm) -0.73  S-acc 0.542
+ C= 6 featPersistence acc 0.189  featNorm acc 0.261  corr(S,persist) -0.68 corr(S,norm) -0.69  S-acc 0.533
+ C= 8 featPersistence acc 0.228  featNorm acc 0.233  corr(S,persist) -0.57 corr(S,norm) -0.69  S-acc 0.508
+ C=10 featPersistence acc 0.286  featNorm acc 0.25  corr(S,persist) -0.33 corr(S,norm) -0.43  S-acc 0.414
+ pooled feature norm acc(imp>pos) 0.433
+ corr S with pooled-norm -0.8344064791450131
+ windows tied (<1e-4) per pair: mean 6.644444444444445
+ post-divergence mean S(imp)-S(pos): mean 0.0010645373  frac>0 0.4666666666666667 n 180
+   C 2 post-div frac imp>pos 0.65
+   C 4 post-div frac imp>pos 0.5333333333333333
+   C 6 post-div frac imp>pos 0.5277777777777778
+   C 8 post-div frac imp>pos 0.5
+   C 10 post-div frac imp>pos 0.4
+M2 S verdict vs B3 verdict agreement 0.4388888888888889
+M1 vs M2 S verdict agreement 0.5555555555555556
+B3 M2 vs M1 verdict agreement 0.6555555555555556
+M1 B3 C 2 0.547  B1 0.586
+M1 B3 C 4 0.633  B1 0.586
+M1 B3 C 6 0.647  B1 0.586
+M1 B3 C 8 0.575  B1 0.586
+M1 B3 C 10 0.397  B1 0.581
+M2 B3 C 2 0.169  B1 0.589
+M2 B3 C 4 0.172  B1 0.586
+M2 B3 C 6 0.189  B1 0.592
+M2 B3 C 8 0.192  B1 0.589
+M2 B3 C 10 0.189  B1 0.583

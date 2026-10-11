@@ -1,0 +1,26 @@
+{
+ "group": "p2_m2",
+ "dev_dataset": "intphys-dev-npz",
+ "note": "M2 (official vjepa2 vitl.pt) cost + sanity on 12 dev videos",
+ "runs": [
+  {
+   "run_id": "P2M_M2_dev12_fp16_2gpu_s1",
+   "precision": "fp16",
+   "n_gpus": 2,
+   "dataset": "ipdev",
+   "subset": {
+    "scenes": [
+     "O1/01",
+     "O2/01",
+     "O3/01"
+    ]
+   },
+   "frame_step": 2,
+   "edit": null,
+   "seed": 1,
+   "baselines": true,
+   "store_feats": true,
+   "model": "M2"
+  }
+ ]
+}

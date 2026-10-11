@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\caption{Specificity (H2). $A$ is the AUROC of $\Delta_{\rm viol}$ against $\Delta_{\rm abrupt}$ (matched-magnitude abrupt events on possible videos), judged against 0.5 (chance); $A_0$ is the clean detection precondition. $D_1=A-A_{B1}$ and $D_2=A-A_{B2}$ are secondary: both baselines sit \emph{below} 0.5, so a positive $D$ does not mean the model is specific. CI: 10,000 scene-cluster bootstrap draws. Holm-2 $p$ for $(D_1, D_2)$: M1 $<$0.001, $<$0.001; M2 $<$0.001, 0.003. Right block: AUROC by abrupt-event type. The lower block repeats the analysis without lighting\_global, whose magnitude match missed its target (84 of 180 entries are no-ops inside the tie band). M2 is descriptive. Events: 178 of 180 pairs use the random-onset fallback; median matched violation magnitude 0.325 grey levels (of 255).}
+\label{tab:t5}
+\centering\scriptsize
+\setlength{\tabcolsep}{1.8pt}
+\begin{tabular}{@{}lccccrrrr@{}}
+\toprule
+Score & $A$ [95\% CI] & $A_0$ & $D_1$ [95\% CI] & $D_2$ [95\% CI] & lighting\_g & lighting\_l & jolt & zoom \\
+\midrule
+\multicolumn{9}{@{}l}{\textit{All four abrupt-event types}} \\
+M1 V-JEPA ViT-L & 0.546 [0.501, 0.591] & 0.722 & 0.211 [0.159, 0.263] & 0.166 [0.116, 0.219] & 0.622 & 0.480 & 0.553 & 0.528 \\
+M2 V-JEPA 2 (descr.) & 0.449 [0.403, 0.496] & 0.600 & 0.125 [0.077, 0.173] & 0.073 [0.020, 0.125] & 0.551 & 0.357 & 0.446 & 0.442 \\
+B1 frame diff. & 0.335 [0.293, 0.378] & 0.556 & -- & -- & 0.362 & 0.273 & 0.372 & 0.334 \\
+B2 copy-last & 0.379 [0.332, 0.429] & 0.600 & -- & -- & 0.394 & 0.316 & 0.430 & 0.378 \\
+M3 VideoMAE V2 & \multicolumn{8}{c}{\textit{not run}} \\
+\midrule
+\multicolumn{9}{@{}l}{\textit{Excluding lighting\_global}} \\
+M1 & 0.520 [0.475, 0.565] & -- & 0.194 [0.142, 0.248] & 0.146 [0.096, 0.198] & -- & 0.480 & 0.553 & 0.528 \\
+M2 (descr.) & 0.415 [0.369, 0.462] & -- & 0.103 [0.053, 0.152] & 0.044 [$-$0.010, 0.096] & -- & 0.357 & 0.446 & 0.442 \\
+\bottomrule
+\end{tabular}
+\end{table*}

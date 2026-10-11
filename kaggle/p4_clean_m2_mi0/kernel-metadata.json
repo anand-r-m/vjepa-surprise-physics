@@ -1,0 +1,15 @@
+{
+  "id": "anandrodriguezmenon/vjepa-p4-p4-clean-m2-mi0",
+  "title": "vjepa-p4-p4-clean-m2-mi0",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "anandrodriguezmenon/intphys-dev-npz"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

@@ -1,0 +1,35 @@
+{
+ "item": "T3",
+ "script": "scripts/figs/t3_controls.py",
+ "outputs": [
+  "paper/tables/t3_controls.tex"
+ ],
+ "generated": "2026-10-11",
+ "verified_keys_used": {
+  "g2_hflip_det": "verified",
+  "g2_m0r_vflip_det": "verified",
+  "g2_rev_det": "verified",
+  "g2_vflip_ci": "verified",
+  "g2_vflip_det": "verified",
+  "g2_vflip_pair_acc": "verified",
+  "h3.M1.minus_M0r_vflip": "verified",
+  "h3.M1.vflip_det_ref_hflip": "verified",
+  "h3.M2.G2_pass": "verified",
+  "h3.M2.hflip_det": "info-only",
+  "h3.M2.minus_M0r_vflip": "verified",
+  "h3.M2.pairwise_vflip_tiehalf": "verified",
+  "h3.M2.reversal_det": "verified",
+  "h3.M2.vflip_det": "verified",
+  "h3.M2.vflip_det_ref_hflip": "verified",
+  "m3.*": "pending"
+ },
+ "verified_keys_missing": [],
+ "input_files": [
+  "results/VERIFIED.json"
+ ],
+ "notes": [
+  "M0r reversal / hflip detection not in VERIFIED: shown n/a",
+  "M3 column: not run",
+  "M1 reversal CI from entry ci of g2_rev_det; M1 hflip CI from entry ci"
+ ]
+}

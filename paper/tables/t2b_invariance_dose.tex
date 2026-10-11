@@ -1,0 +1,34 @@
+\begin{table*}[t]
+\caption{Invariance dose-response (A3): the same quantities as Table~\ref{tab:t2} of the main text at low / mid / high strength. Holm-adjusted $p$: 30-test family for the M1 columns (all graded cells), 22-test family for the M2 columns (11 seed-1 cells, two tests each; JPEG and zoom exist at high strength only). Flip$-f_0$ for low and mid is the difference of the two rates (no CI). M1 $f_0$ = 21.5\%, M2 $f_0$ = 24.6\%. The five ``pend.'' cells are M2 JPEG and zoom at low and mid strength, which were not run (GPU quota).}
+\label{tab:t2b}
+\centering\scriptsize
+\setlength{\tabcolsep}{1.9pt}
+\begin{tabular}{@{}llrrrrrrrr@{}}
+\toprule
+ & & \multicolumn{4}{c}{M1 V-JEPA ViT-L} & \multicolumn{4}{c}{M2 V-JEPA 2 (descriptive)} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-10}
+Edit & Strength ($n$) & $\Delta$Acc [CI] & Flip & Flip$-f_0$ & $p$ ($\Delta$/flip) & $\Delta$Acc [CI] & Flip & Flip$-f_0$ & $p$ ($\Delta$/flip) \\
+\midrule
+Brightness & low (180) & $-$0.0 [$-$2.1, 2.0] & 7.0 & $-$14.4 & 1.00 / 1.00 & +1.4 [$-$1.1, 4.2] & 11.7 & $-$13.0 & 1.00 / 1.00 \\
+ & mid (180) & +0.7 [$-$1.9, 3.5] & 9.6 & $-$11.9 & 1.00 / 1.00 & +2.8 [$-$0.8, 6.7] & 16.1 & $-$8.5 & 1.00 / 1.00 \\
+ & high (180) & $-$2.4 [$-$5.1, 0.3] & 12.4 & $-$9.1 & 1.00 / 1.00 & $-$0.4 [$-$3.1, 2.5] & 15.4 & $-$9.3 & 1.00 / 1.00 \\
+\addlinespace[1pt]
+Noise & low (180) & $-$17.7 [$-$22.5, $-$13.0] & 33.2 & +11.7 & $<$0.001 / $<$0.001 & $-$4.4 [$-$10.3, 1.4] & 26.1 & +1.5 & 1.00 / 1.00 \\
+ & mid (180) & $-$19.9 [$-$25.1, $-$14.7] & 35.0 & +13.5 & $<$0.001 / $<$0.001 & $-$8.1 [$-$13.9, $-$2.2] & 30.0 & +5.4 & 0.11 / 0.25 \\
+ & high (180) & $-$20.6 [$-$25.7, $-$15.3] & 37.8 & +16.3 & $<$0.001 / $<$0.001 & $-$6.4 [$-$11.5, $-$1.3] & 28.3 & +3.7 & 0.13 / 0.30 \\
+\addlinespace[1pt]
+Blur & low (180) & $-$4.7 [$-$9.2, $-$0.6] & 18.3 & $-$3.2 & 0.63 / 1.00 & +15.8 [10.0, 21.9] & 35.6 & +10.9 & $<$0.001 / 0.076 \\
+ & mid (180) & $-$11.9 [$-$16.9, $-$6.9] & 25.6 & +4.1 & $<$0.001 / 1.00 & +18.6 [13.1, 24.4] & 34.4 & +9.8 & $<$0.001 / 0.094 \\
+ & high (180) & $-$14.4 [$-$19.4, $-$9.4] & 31.1 & +9.6 & $<$0.001 / 0.002 & +12.8 [6.4, 19.2] & 42.2 & +17.6 & $<$0.001 / $<$0.001 \\
+\addlinespace[1pt]
+JPEG & low (180) & +5.8 [1.4, 10.6] & 14.4 & $-$7.0 & 0.24 / 1.00 & \textit{pend.} & \textit{pend.} & \textit{pend.} & \textit{pend.} \\
+ & mid (180) & +0.8 [$-$3.3, 5.3] & 17.2 & $-$4.3 & 1.00 / 1.00 & \textit{pend.} & \textit{pend.} & \textit{pend.} & \textit{pend.} \\
+ & high (180) & $-$10.8 [$-$16.4, $-$5.3] & 28.3 & +6.8 & $<$0.001 / 0.32 & $-$1.7 [$-$7.8, 4.4] & 40.6 & +15.9 & 1.00 / $<$0.001 \\
+\addlinespace[1pt]
+Zoom (crop)$^{\rm a}$ & low (134) & +4.5 [0.8, 8.6] & 14.9 & $-$6.6 & 0.32 / 1.00 & \textit{pend.} & \textit{pend.} & \textit{pend.} & \textit{pend.} \\
+ & mid (120) & $-$2.1 [$-$7.4, 3.4] & 15.0 & $-$6.5 & 1.00 / 1.00 & \textit{pend.} & \textit{pend.} & \textit{pend.} & \textit{pend.} \\
+ & high (112) & $-$0.5 [$-$5.7, 4.9] & 14.3 & $-$7.2 & 1.00 / 1.00 & +7.1 [1.7, 12.8] & 25.0 & $-$5.7 & 0.13 / 1.00 \\
+\addlinespace[1pt]
+\bottomrule
+\end{tabular}
+\end{table*}

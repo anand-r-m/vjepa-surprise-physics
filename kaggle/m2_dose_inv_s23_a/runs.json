@@ -1,0 +1,102 @@
+{
+ "group": "m2_dose_inv_s23_a",
+ "dev_dataset": "intphys-dev-npz",
+ "runs": [
+  {
+   "run_id": "P4_M2_ipdev_brightness-low_s2",
+   "model": "M2",
+   "edit": {
+    "name": "brightness",
+    "strength": "low"
+   },
+   "seed": 2,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_brightness-low_s3",
+   "model": "M2",
+   "edit": {
+    "name": "brightness",
+    "strength": "low"
+   },
+   "seed": 3,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_brightness-mid_s2",
+   "model": "M2",
+   "edit": {
+    "name": "brightness",
+    "strength": "mid"
+   },
+   "seed": 2,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_brightness-mid_s3",
+   "model": "M2",
+   "edit": {
+    "name": "brightness",
+    "strength": "mid"
+   },
+   "seed": 3,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_noise-low_s2",
+   "model": "M2",
+   "edit": {
+    "name": "noise",
+    "strength": "low"
+   },
+   "seed": 2,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_noise-low_s3",
+   "model": "M2",
+   "edit": {
+    "name": "noise",
+    "strength": "low"
+   },
+   "seed": 3,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  }
+ ]
+}

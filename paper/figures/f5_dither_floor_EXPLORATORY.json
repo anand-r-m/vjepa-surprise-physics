@@ -1,0 +1,18 @@
+{
+ "item": "F5",
+ "script": "scripts/figs/f5_dither_floor.py",
+ "outputs": [
+  "paper/figures/f5_dither_floor_EXPLORATORY.pdf"
+ ],
+ "generated": "2026-10-10",
+ "verified_keys_used": {},
+ "verified_keys_missing": [],
+ "input_files": [
+  "figures/dither_floor_EXPLORATORY_post-hoc.pdf",
+  "results/analysis/h1/dither_floor_EXPLORATORY.json"
+ ],
+ "notes": [
+  "Copy of figures/dither_floor_EXPLORATORY_post-hoc.pdf (scripts/fig_dither_floor.py); no VERIFIED keys; numbers in the figure come from results/analysis/h1/dither_floor_EXPLORATORY.json",
+  "Not re-styled: greyscale legibility not re-checked by this script"
+ ]
+}

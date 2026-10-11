@@ -1,0 +1,56 @@
+===== M1
+mean S per C col [0.5533 0.5378 0.5351 0.539  0.5514]  sd between-video of per-video mean per C [0.0153 0.0195 0.0189 0.0148 0.0111]
+mean S per window (min over C) [0.5278 0.528  0.5279 0.5279 0.5277 0.5302 0.5328 0.5337 0.534  0.5333 0.531  0.5317 0.5345 0.5344 0.532  0.5304 0.5289]
+argmin over C histogram [ 118 1646 2942 1091  323]  (fraction) [0.0193 0.269  0.4807 0.1783 0.0528]
+frac (window) with S monotone increasing in C 0.004084967320261438  decreasing 0.011437908496732025
+within-video sd across windows (min-over-C), median 0.0074836914  between-video sd of mean 0.016073303
+  acc mean C=min: tiehalf/strict [0.808 0.811]
+  acc mean C=2: tiehalf/strict [0.344 0.333]
+  acc mean C=4: tiehalf/strict [0.769 0.772]
+  acc mean C=6: tiehalf/strict [0.792 0.8  ]
+  acc mean C=8: tiehalf/strict [0.794 0.783]
+  acc mean C=10: tiehalf/strict [0.789 0.794]
+  acc max C=min: tiehalf/strict [0.725 0.622]
+  acc max C=2: tiehalf/strict [0.528 0.283]
+  acc max C=4: tiehalf/strict [0.669 0.461]
+  acc max C=6: tiehalf/strict [0.675 0.528]
+  acc max C=8: tiehalf/strict [0.619 0.539]
+  acc max C=10: tiehalf/strict [0.619 0.533]
+  agg meanC mean-window [0.753 0.761]
+  agg maxC mean-window [0.628 0.617]
+per-window strict acc (imp>pos): [0.06 0.11 0.12 0.17 0.27 0.28 0.39 0.47 0.56 0.61 0.64 0.63 0.61 0.58 0.54 0.47 0.45]
+pair diff mean, sd, frac>0 0.0018789256417673411 0.00301057572411486 0.8111111111111111  d/sd(S) 0.11689728428681967
+  B1 acc [0.581 0.572]  corr(S,B1) across videos 0.8652402826417613
+     corr of pair diffs S vs B1 0.47811231158192863
+  B2 acc [0.761 0.761]  corr(S,B2) across videos 0.8366248407748015
+     corr of pair diffs S vs B2 0.42255800508359076
+  B3 acc [0.453 0.45 ]  corr(S,B3) across videos -0.798535408236187
+     corr of pair diffs S vs B3 -0.48087191665862755
+===== M2
+mean S per C col [0.5915 0.5881 0.5855 0.5807 0.5819]  sd between-video of per-video mean per C [0.0104 0.0094 0.0083 0.0082 0.0072]
+mean S per window (min over C) [0.5803 0.5796 0.5811 0.5827 0.5835 0.5811 0.579  0.5759 0.573  0.5719 0.5731 0.5762 0.5754 0.575  0.5756 0.5764 0.577 ]
+argmin over C histogram [ 509  356   94 2632 2529]  (fraction) [0.0832 0.0582 0.0154 0.4301 0.4132]
+frac (window) with S monotone increasing in C 0.05212418300653595  decreasing 0.25130718954248366
+within-video sd across windows (min-over-C), median 0.008352887  between-video sd of mean 0.007810131
+  acc mean C=min: tiehalf/strict [0.469 0.467]
+  acc mean C=2: tiehalf/strict [0.658 0.65 ]
+  acc mean C=4: tiehalf/strict [0.542 0.533]
+  acc mean C=6: tiehalf/strict [0.533 0.528]
+  acc mean C=8: tiehalf/strict [0.508 0.5  ]
+  acc mean C=10: tiehalf/strict [0.414 0.4  ]
+  acc max C=min: tiehalf/strict [0.644 0.483]
+  acc max C=2: tiehalf/strict [0.708 0.511]
+  acc max C=4: tiehalf/strict [0.711 0.561]
+  acc max C=6: tiehalf/strict [0.644 0.478]
+  acc max C=8: tiehalf/strict [0.575 0.456]
+  acc max C=10: tiehalf/strict [0.553 0.422]
+  agg meanC mean-window [0.531 0.544]
+  agg maxC mean-window [0.617 0.628]
+per-window strict acc (imp>pos): [0.07 0.11 0.12 0.17 0.24 0.31 0.31 0.32 0.32 0.38 0.37 0.37 0.33 0.38 0.38 0.36 0.38]
+pair diff mean, sd, frac>0 0.000270699734002158 0.0023830797279335704 0.4666666666666667  d/sd(S) 0.03466008076815955
+  B1 acc [0.578 0.583]  corr(S,B1) across videos 0.6071809103401227
+     corr of pair diffs S vs B1 0.28119683282406727
+  B2 acc [0.761 0.761]  corr(S,B2) across videos 0.5907095148737737
+     corr of pair diffs S vs B2 0.1996286291920587
+  B3 acc [0.172 0.172]  corr(S,B3) across videos -0.599220019395192
+     corr of pair diffs S vs B3 -0.30383133995884387

@@ -1,0 +1,26 @@
+# IntPhys 2 Main (M1, clean, descriptive) - implementation note
+
+Prereg s8: "IntPhys 2 Main: M1 clean accuracy (descriptive)"; H2 on Main is not run (no event-time column); no edited, M0r, M2 or M3 run on Main. So the only group is one run.
+
+## Group
+| group | run | videos | model | est. 2xT4 fp16 |
+|---|---|---|---|---|
+| `ip2main_clean_m1` | `P4_M1_ip2main_clean_s1` (dataset `ip2main`, members all, skip 2, seed 1, baselines B1/B2/B3 + target features stored, fp16, n_gpus 2) | 1012 (506 pairs) | M1 | 0.77 h model time (1012 x 2.73 s) + ~5 min start-up/checkpoint, i.e. ~0.9 h |
+
+2.73 s/video = 5.46 s/video measured on 1 GPU with the IntPhys 2 mp4 loader (`results/raw/p2_det/results/P2D_M1_ip2dbg_fp16_clean_s1/meta.json`, 6 Debug videos, wall including decode) divided by 2 GPUs (dev: 5.17 -> 2.54 measured, same ratio). Main videos are the same format as Debug (636 frames, 60 fps, 512x512), so the compute is the same 100-frame / 17-window M1 job; mp4 decoding (~0.4 s/video) is hidden behind 2 GPUs x 2.7 s. Kaggle quota: ~0.9 h of the remaining GPU budget; one kernel, no splitting needed (checkpointing is per run, so a cut session reruns the single run; split `subset` every/n if you want finer granularity).
+
+## Implementation and the same-code-path rule
+`kaggle/common/run_lib.py` is NOT changed (byte-identical to the 4c4017b bundles). Main support is a new module `kaggle/ip2main/ip2main_lib.py` plus `kaggle/ip2main/preamble.py`, bundled only for groups whose name starts with `ip2main` (`kaggle/build_kernel.py`; that file is not part of any bundle). The preamble sits between the bundle header and the unchanged `kernel_main.py` body and patches the imported `run_lib` in memory: `iter_items` gets dataset `ip2main` (same `data.ip2_pairs` / `data.load_ip2_video(max_frames=100, stride=4)` as `ip2debug`, over `<root>/Main`; pair_id `ip2m/<SceneIndex>/<k>`, `block` = metadata `condition`), and `main` resolves the IntPhys 2 root. Models, windows, baselines, aggregation, fp16 flags, sharding are untouched.
+
+Decoded bundle of `ip2main_clean_m1` (head b8f604b) versus the 4c4017b bundles g2_controls, h1_inv_a, h1_inv_c, h2_spec_a, h2_spec_b (and h1_inv_b, same code): differing files are `BUNDLE_INFO.json`, `runs.json`, `matches.json` (only vs h2_spec_*), the two new files `kaggle/ip2main/{ip2main_lib,preamble}.py`, and `src/vjepa_study/models/m2_vjepa2.py` (the A-Q10 amendment, already permitted). The built `run.py` text differs by the preamble lines. `kaggle/common/*`, `configs/edit_params.yaml`, `src/` (other than m2_vjepa2.py), the pinned externals are byte-identical. Versus `p4_clean_m1` (606d732) the extra differences are the ones prereg s1 already lists (`edit_params.yaml` E1 exemption, `analysis/{prereg,metrics}.py`). **Verdict: the rule holds** for every contrast prereg s1 permits; the two added files are Main-only and are not read by any ipdev run. Strictly, they are not in the s1 permitted list; no contrast involves Main (it is a separate dataset, descriptive), so I regard this as a disclosure item for the lead: add `kaggle/ip2main/*` to the s1 list in an amendment note (disclosure only) if you want it literal. Locked in by `tests/test_ip2main.py::test_same_code_path_vs_h1_bundle`.
+
+## Build and head
+Built in one pass from a clean tree (`repo_dirty: false`) at head `b8f604b3951ee6a3a7f3a0299f9c3f5b0a6a92f5`; `scripts/check_bundle_hash.py ip2main_clean_m1` prints OK (yaml sha256 d7e4a945...c4eb). The head is appended to `REPO_HEAD_ALLOWLIST` in a separate one-line commit. Only `kaggle/ip2main_clean_m1/run.py` is a new build product; no other bundle was rebuilt. Local smoke (real Main files, fake model, `-I`): 2 pairs, 4 items, 17 windows, B1/B2/B3 stored, labels 0/1, blocks from metadata.
+
+## Dataset upload (human step): none needed
+The private Kaggle dataset `anandrodriguezmenon/intphys2` already contains `Main/` (checked read-only through the Kaggle file listing on 2026-10-08: 1012 files under `Main/Videos/` plus `Main/metadata.csv`; also Debug 60 + metadata, HeldOut 344, LICENSE.md). The kernel metadata attaches only `anandrodriguezmenon/intphys2` (mounted as `/kaggle/input/intphys2/{Debug,Main,HeldOut}`; `find_ip2` finds the root via `Debug/`). Names/sizes were not byte-compared against the local copy beyond counts; `kernel_main` logs the dataset paths and `ip2main_lib` logs its root. The Main files stay evaluation-only, CC BY-NC 4.0, private dataset, not redistributed.
+
+## Observations for the writer / lead
+- Main has 506 pairs, 1012 videos: conditions solidity 292 videos, permanence 240, immutability 240, continuity 240. `block` in the output is this condition, so a per-condition breakdown needs no join.
+- The 8 videos shared by name with Debug are NOT byte-identical files: the Main copies are re-encodes (bytes differ from byte 36; decoded 100-frame clips differ by ~2.1 grey levels mean absolute difference, max 255). The prereg s8 "with and without them" accounting is unaffected (matching is by name), but "same video" should read "same name".
+- Pairs are formed with `data.ip2_pairs` (SceneIndex x trial index k, possible vs impossible), identical to the Debug protocol; SceneIndex is the scene cluster for any cluster bootstrap (`scene_id = ip2m/<SceneIndex>`).

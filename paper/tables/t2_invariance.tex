@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\caption{Invariance (H1), high strength. $\Delta$Acc = accuracy under the same edit applied to both videos of a pair minus clean accuracy, in percentage points (scene-cluster 95\% CI); flip = share of pairs whose verdict changes; flip$-f_0$ = flip rate minus the dither floor $f_0$ (a perturbation that should not matter at all): M1 $f_0$ = 21.5\% (strict 15.6\%), M2 $f_0$ = 24.6\%. A flip rate near $f_0$ is what an invisible perturbation produces. Holm-14 adjusted $p$ for $\Delta$Acc / flip. M1 is the confirmatory row; M2 is \textbf{descriptive only} (clean accuracy below the 80\% eligibility rule).}
+\label{tab:t2}
+\centering\scriptsize
+\setlength{\tabcolsep}{1.9pt}
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+ & \multicolumn{4}{c}{M1 V-JEPA ViT-L} & \multicolumn{4}{c}{M2 V-JEPA 2 (descriptive)} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Edit ($n$ pairs) & $\Delta$Acc [CI] & Flip & Flip$-f_0$ [CI] & $p$ ($\Delta$/flip) & $\Delta$Acc [CI] & Flip & Flip$-f_0$ [CI] & $p$ ($\Delta$/flip) \\
+\midrule
+Brightness (180) & $-$2.4 [$-$5.1, 0.3] & 12.4 & $-$9.1 [$-$14.1, $-$4.4] & 0.63 / 1.00 & $-$0.4 [$-$3.1, 2.5] & 15.4 & $-$9.3 [$-$14.3, $-$4.6] & 1.00 / 1.00 \\
+Noise (180) & $-$20.6 [$-$25.7, $-$15.3] & 37.8 & +16.3 [10.6, 22.4] & $<$0.001 / $<$0.001 & $-$6.4 [$-$11.5, $-$1.3] & 28.3 & +3.7 [$-$0.2, 8.0] & 0.13 / 0.30 \\
+Blur (180) & $-$14.4 [$-$19.4, $-$9.4] & 31.1 & +9.6 [4.3, 15.4] & $<$0.001 / 0.001 & +12.8 [6.4, 19.2] & 42.2 & +17.6 [10.4, 24.8] & $<$0.001 / $<$0.001 \\
+JPEG (180) & $-$10.8 [$-$16.4, $-$5.3] & 28.3 & +6.9 [0.6, 13.7] & $<$0.001 / 0.15 & $-$1.7 [$-$7.8, 4.4] & 40.6 & +15.9 [8.9, 23.3] & 1.00 / $<$0.001 \\
+Zoom (crop)$^{\rm a}$ (112) & $-$0.5 [$-$5.7, 4.9] & 14.3 & $-$8.9 [$-$16.4, $-$1.6] & 1.00 / 1.00 & +7.1 [1.7, 12.8] & 25.0 & $-$5.7 [$-$13.9, 3.1] & 0.13 / 1.00 \\
+Horiz.\ flip (180) & +2.2 [$-$2.2, 6.7] & 15.0 & $-$6.5 [$-$12.8, $-$0.2] & 1.00 / 1.00 & +3.3 [$-$0.3, 6.9] & 15.6 & $-$9.1 [$-$14.1, $-$4.1] & 0.58 / 1.00 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\raggedright\scriptsize Flip and flip$-f_0$ in \%, $\Delta$Acc in pp. $^{\rm a}$Pairs where the crop keeps the scene support (112 of 180); the other 68 are excluded for both models. Frame-rate halving is not tabulated: its edited input is bit-identical to the skip-4 clean reference, so the edit is degenerate by design (a design error in the edit list, reported here for completeness).
+\end{table*}

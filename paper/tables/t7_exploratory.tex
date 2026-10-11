@@ -1,0 +1,25 @@
+\begin{table}[t]
+\caption{EXPLORATORY (post-hoc, not pre-registered). (a) H2 re-run with the event onset defined from the data (first frame at which the impossible and possible videos differ), instead of the frozen threshold that found an onset in only 2 of 180 pairs; 60 of the 180 events are transient. $A$ = specificity AUROC [95\% CI]; $D_1$, $D_2$ vs B1, B2 (Holm-2 $p$). (b) Halve-and-hold edit for H1 (frame rate halved, clip length held), replacing the frame-rate-halving edit, which was a design error.}
+\label{tab:t7}
+\centering\scriptsize
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\multicolumn{2}{@{}l}{\textbf{EXPLORATORY (a) onset-aligned H2, M1}} \\
+\midrule
+$A$ [95\% CI] & 0.392 [0.354, 0.428] \\
+$A_0$ (clean, same aggregation) [CI] & 0.722 [0.653, 0.789] \\
+$A$ without lighting\_global [CI] & 0.392 [0.357, 0.426] \\
+$D_1$ vs B1 [CI] (Holm $p$) & 0.065 [0.023, 0.109] (0.003) \\
+$D_2$ vs B2 [CI] (Holm $p$) & 0.011 [$-$0.026, 0.051] (0.28) \\
+$A_{B1}$, $A_{B2}$ & 0.327, 0.381 \\
+$A$ by type (lg / ll / jolt / zoom) & 0.390 / 0.460 / 0.400 / 0.317 \\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{EXPLORATORY (b) halve-and-hold, M1}} \\
+\midrule
+$\Delta$Acc [CI] (pp) & +1.9 [$-$3.3, 7.5] \\
+Flip rate (\%) / floor $f_0$ (\%) & 20.0 / 21.5 \\
+Flip $-$ $f_0$ [CI] (pp) & $-$1.5 [$-$8.2, 5.2] \\
+\bottomrule
+\end{tabular}
+\end{table}

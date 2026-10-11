@@ -1,0 +1,7 @@
+[1] 083861b17a8b3f4bef7e3aaad0b960318a5ea19ca98258fe2bfd700d11343e3d dev=cuda:0 windows=17 S[min,mean,max]=(0.5431,0.5700,0.6038) elapsed=7.4s
+[2] 3790b69ff5bd127e237581effb59dca012b191478f28ae9036fe215bb4fd3a18 dev=cuda:0 windows=17 S[min,mean,max]=(0.5464,0.5670,0.6041) elapsed=13.0s
+[3] 0996318787089d31d84af8327bb044e77120cd0a6c6eb7425a179f932369146b dev=cuda:0 windows=17 S[min,mean,max]=(0.5518,0.5828,0.6229) elapsed=18.6s
+[4] 1bfb101f76515eca026da816f93ef12139080b5aaeca609f49bf26b0135a15df dev=cuda:0 windows=17 S[min,mean,max]=(0.5508,0.5815,0.6260) elapsed=24.2s
+[5] fb11d35c2c4a9dfb0e37bc57dc9a39fb20351fba0b841e306f8e167aa0079a8e dev=cuda:0 windows=17 S[min,mean,max]=(0.5586,0.5753,0.5998) elapsed=29.7s
+[6] 7a296b55aa718b71e24b2d20ead38e4640ee11736a55de772ecabac6df1f9a2f dev=cuda:0 windows=17 S[min,mean,max]=(0.5580,0.5740,0.6047) elapsed=35.3s
+done P2D_M1_ip2dbg_fp16_dither_s1 n=6 wall=35.3s model=30.1s

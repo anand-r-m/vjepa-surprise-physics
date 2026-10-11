@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{Positive controls: detection rate in \% [95\% scene-cluster CI] of possible videos whose surprise rises after an edit that creates (or, for horizontal flip, does not create) a violation. The G2 gate required $\geq$80\% for vertical flip; the random-initialised M1 (M0r) is the reference for ``no learned sensitivity''. M1 and M2 differ from M0r by $-$66.7 [$-$76.1, $-$56.7] and $-$15.8 [$-$25.0, $-$6.7] pp (vflip). M2 is descriptive.}
+\label{tab:t3}
+\centering\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Control & M1 & M2 & M0r & M3 \\
+\midrule
+Vertical flip vs clean & 21.1 [14.7, 28.1] & 71.9 [64.4, 78.9] & 87.8 [82.2, 93.1] & \textit{not run} \\
+Vertical flip vs h-flip reference & 25.8 [18.6, 33.3] & 72.8 [65.3, 80.0] & n/a & \textit{not run} \\
+Time reversal vs clean & 60.8 [51.7, 69.4] & 46.4 [38.6, 54.2] & n/a & \textit{not run} \\
+Horizontal flip vs clean (neutral edit) & 38.6 [31.1, 46.4] & 51.1 [43.1, 59.2] & n/a & \textit{not run} \\
+\midrule
+G2 gate (vflip $\geq$ 80\%) & not met & not met & -- & -- \\
+Pairwise acc.\ on vflip pairs & 83.9 & 64.4 & -- & \textit{not run} \\
+\bottomrule
+\end{tabular}
+\end{table*}

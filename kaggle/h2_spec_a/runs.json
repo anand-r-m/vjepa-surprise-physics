@@ -1,0 +1,312 @@
+{
+ "group": "h2_spec_a",
+ "dev_dataset": "intphys-dev-npz",
+ "runs": [
+  {
+   "run_id": "P4_M1_ipdev_lighting_global-low_s1",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_global",
+    "level": "low",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 1,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_global-low_s2",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_global",
+    "level": "low",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 2,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_global-low_s3",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_global",
+    "level": "low",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 3,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_global-mid_s1",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_global",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 1,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_global-mid_s2",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_global",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 2,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_global-mid_s3",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_global",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 3,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_global-high_s1",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_global",
+    "level": "high",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 1,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_global-high_s2",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_global",
+    "level": "high",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 2,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_global-high_s3",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_global",
+    "level": "high",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 3,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_local-low_s1",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_local",
+    "level": "low",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 1,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_local-low_s2",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_local",
+    "level": "low",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 2,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_local-low_s3",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_local",
+    "level": "low",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 3,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_local-mid_s1",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_local",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 1,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_local-mid_s2",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_local",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 2,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_local-mid_s3",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_local",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 3,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_local-high_s1",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_local",
+    "level": "high",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 1,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_local-high_s2",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_local",
+    "level": "high",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 2,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M1_ipdev_lighting_local-high_s3",
+   "model": "M1",
+   "edit": {
+    "name": "lighting_local",
+    "level": "high",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 3,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  }
+ ]
+}

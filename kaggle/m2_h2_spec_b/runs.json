@@ -1,0 +1,89 @@
+{
+ "group": "m2_h2_spec_b",
+ "dev_dataset": "intphys-dev-npz",
+ "runs": [
+  {
+   "run_id": "P4_M2_ipdev_jolt_base-mid_s1",
+   "model": "M2",
+   "edit": {
+    "name": "jolt_base",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 1,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_jolt_base-mid_s2",
+   "model": "M2",
+   "edit": {
+    "name": "jolt_base",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 2,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_jolt_base-mid_s3",
+   "model": "M2",
+   "edit": {
+    "name": "jolt_base",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 3,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_zoom_base-mid_s1",
+   "model": "M2",
+   "edit": {
+    "name": "zoom_base",
+    "level": "mid",
+    "matches": "/kaggle/working/code/matches.json"
+   },
+   "seed": 1,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_base_ref-ref_s1",
+   "model": "M2",
+   "edit": {
+    "name": "base_ref"
+   },
+   "seed": 1,
+   "members": "possible",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  }
+ ]
+}

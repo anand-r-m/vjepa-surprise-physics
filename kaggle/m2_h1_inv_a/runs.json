@@ -1,0 +1,82 @@
+{
+ "group": "m2_h1_inv_a",
+ "dev_dataset": "intphys-dev-npz",
+ "runs": [
+  {
+   "run_id": "P4_M2_ipdev_brightness-high_s1",
+   "model": "M2",
+   "edit": {
+    "name": "brightness",
+    "strength": "high"
+   },
+   "seed": 1,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_brightness-high_s2",
+   "model": "M2",
+   "edit": {
+    "name": "brightness",
+    "strength": "high"
+   },
+   "seed": 2,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_brightness-high_s3",
+   "model": "M2",
+   "edit": {
+    "name": "brightness",
+    "strength": "high"
+   },
+   "seed": 3,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_fps_halve-high_s1",
+   "model": "M2",
+   "edit": {
+    "name": "halve"
+   },
+   "seed": 1,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_clean-skip4_s1",
+   "model": "M2",
+   "edit": null,
+   "seed": 1,
+   "members": "all",
+   "baselines": true,
+   "store_feats": true,
+   "dataset": "ipdev",
+   "frame_step": 4,
+   "precision": "fp16",
+   "n_gpus": 2
+  }
+ ]
+}

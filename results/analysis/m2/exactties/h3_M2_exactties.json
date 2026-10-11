@@ -1,0 +1,36 @@
+{
+ "a": 0.7222222222222222,
+ "a_ci": [
+  0.6444444444444445,
+  0.7944444444444444
+ ],
+ "b": 0.7388888888888889,
+ "b_ci": [
+  0.6611111111111111,
+  0.8111111111111111
+ ],
+ "diff_m0r": -0.15555555555555556,
+ "diff_m0r_ci": [
+  -0.25555555555555554,
+  -0.05555555555555558
+ ],
+ "learned_sensitivity_credited": false,
+ "g2": false,
+ "variant": {
+  "how": "max",
+  "c_index": null,
+  "tie_value": 0.5,
+  "tau_scale": 0.0,
+  "tau": 0.0
+ },
+ "reversal_detection": 0.45,
+ "reversal_below_half_diagnostic_needed": true,
+ "pairwise_acc_vflip": {
+  "tiehalf": 0.6555555555555556,
+  "strict": 0.6555555555555556
+ },
+ "pairwise_acc_time_reversal": {
+  "tiehalf": 0.6111111111111112,
+  "strict": 0.6111111111111112
+ }
+}

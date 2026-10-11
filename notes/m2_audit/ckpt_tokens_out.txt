@@ -1,0 +1,22 @@
+dict_keys(['encoder', 'predictor', 'opt', 'scaler', 'target_encoder', 'epoch', 'loss', 'batch_size', 'world_size', 'lr'])
+predictor 160 ['module.backbone.predictor_embed.weight', 'module.backbone.predictor_embed.bias', 'module.backbone.mask_tokens.0']
+encoder 292 ['module.backbone.patch_embed.proj.weight', 'module.backbone.patch_embed.proj.bias', 'module.backbone.blocks.0.norm1.weight']
+target_encoder 292 ['module.backbone.patch_embed.proj.weight', 'module.backbone.patch_embed.proj.bias', 'module.backbone.blocks.0.norm1.weight']
+module.backbone.mask_tokens.0 (1, 1, 384) norm=0.76918 absmax=0.38290
+module.backbone.mask_tokens.1 (1, 1, 384) norm=0.00000 absmax=0.00000
+module.backbone.mask_tokens.2 (1, 1, 384) norm=0.00000 absmax=0.00000
+module.backbone.mask_tokens.3 (1, 1, 384) norm=0.00000 absmax=0.00000
+module.backbone.mask_tokens.4 (1, 1, 384) norm=0.00000 absmax=0.00000
+module.backbone.mask_tokens.5 (1, 1, 384) norm=0.00000 absmax=0.00000
+module.backbone.mask_tokens.6 (1, 1, 384) norm=0.00000 absmax=0.00000
+module.backbone.mask_tokens.7 (1, 1, 384) norm=0.00000 absmax=0.00000
+module.backbone.mask_tokens.8 (1, 1, 384) norm=0.00000 absmax=0.00000
+module.backbone.mask_tokens.9 (1, 1, 384) norm=0.00000 absmax=0.00000
+opt ...
+scaler ...
+epoch 40
+loss 0.544565715789795
+batch_size 12
+world_size 256
+lr 0.000525
+[]

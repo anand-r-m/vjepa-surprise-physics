@@ -1,0 +1,35 @@
+{
+ "item": "T7",
+ "script": "scripts/figs/t7_exploratory.py",
+ "outputs": [
+  "paper/tables/t7_exploratory.tex"
+ ],
+ "generated": "2026-10-11",
+ "verified_keys_used": {
+  "expl.halve_hold.dacc_pp": "verified",
+  "expl.halve_hold.f0_pct": "verified",
+  "expl.halve_hold.flip_minus_f0_pp": "verified",
+  "expl.halve_hold.flip_pct": "verified",
+  "expl.onset.A": "verified",
+  "expl.onset.A.jolt_base": "verified",
+  "expl.onset.A.lighting_global": "verified",
+  "expl.onset.A.lighting_local": "verified",
+  "expl.onset.A.zoom_base": "verified",
+  "expl.onset.A0": "verified",
+  "expl.onset.A_B1": "verified",
+  "expl.onset.A_B2": "verified",
+  "expl.onset.A_nolg": "verified",
+  "expl.onset.D_1": "verified",
+  "expl.onset.D_2": "verified",
+  "expl.onset.holm2_D_1": "verified",
+  "expl.onset.holm2_D_2": "verified",
+  "expl.onset.n_transient": "verified"
+ },
+ "verified_keys_missing": [],
+ "input_files": [
+  "results/VERIFIED.json"
+ ],
+ "notes": [
+  "Extra item (not in PROJECT_SPEC Expected outputs); all keys have exploratory=True"
+ ]
+}

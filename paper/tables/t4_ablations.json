@@ -1,0 +1,48 @@
+{
+ "item": "T4",
+ "script": "scripts/figs/t4_ablations.py",
+ "outputs": [
+  "paper/tables/t4_ablations.tex"
+ ],
+ "generated": "2026-10-10",
+ "verified_keys_used": {
+  "abl.A1_full_max.A": "verified",
+  "abl.A1_full_max.A0": "verified",
+  "abl.A1_full_max.D_1": "verified",
+  "abl.A1_full_max.D_2": "verified",
+  "abl.A1_full_max.clean_pct": "verified",
+  "abl.A1_mean.A": "verified",
+  "abl.A1_mean.A0": "verified",
+  "abl.A1_mean.D_1": "verified",
+  "abl.A1_mean.D_2": "verified",
+  "abl.A1_mean.clean_pct": "verified",
+  "abl.A2_C10.A": "verified",
+  "abl.A2_C10.A0": "verified",
+  "abl.A2_C10.D_1": "verified",
+  "abl.A2_C10.D_2": "verified",
+  "abl.A2_C10.clean_pct": "verified",
+  "abl.A2_C2.A": "verified",
+  "abl.A2_C2.A0": "verified",
+  "abl.A2_C2.D_1": "verified",
+  "abl.A2_C2.D_2": "verified",
+  "abl.A2_C2.clean_pct": "verified",
+  "abl.A2_C6.A": "verified",
+  "abl.A2_C6.A0": "verified",
+  "abl.A2_C6.D_1": "verified",
+  "abl.A2_C6.D_2": "verified",
+  "abl.A2_C6.clean_pct": "verified",
+  "clean.M1_fp16.tiehalf": "verified",
+  "h2.M1.A": "verified",
+  "h2.M1.A0": "verified",
+  "h2.M1.D_B1": "verified",
+  "h2.M1.D_B2": "verified"
+ },
+ "verified_keys_missing": [],
+ "input_files": [
+  "results/VERIFIED.json"
+ ],
+ "notes": [
+  "All rows use VERIFIED abl.* keys",
+  "M2 ablations not run (A1/A2 H2 variants for M2 not produced)"
+ ]
+}

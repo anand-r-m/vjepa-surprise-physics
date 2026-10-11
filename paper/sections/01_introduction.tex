@@ -1,0 +1,24 @@
+\section{Introduction}
+\label{sec:intro}
+\begin{figure*}[t]
+\centering
+\IfFig{figures/f0_schematic.pdf}{Fig.~0 placeholder: a matched possible/impossible pair is scored by a predictor, giving a surprise curve; the three tests are invariance, specificity and positive controls.}
+\caption{The violation-of-expectation protocol and the three tests we run. A model watches a possible and an impossible clip that look almost identical, and its prediction error (surprise) is compared. We ask whether that comparison survives harmless edits (invariance), whether it separates physics violations from abrupt but possible events (specificity), and whether it rises when we create a violation ourselves (positive controls).}
+\label{fig:f0}
+\end{figure*}
+
+The violation-of-expectation (VoE) paradigm shows a model two videos that differ in one respect. In a typical IntPhys scene a ball rolls behind a screen; in the possible video it comes out the other side, and in the impossible one it vanishes. The videos are otherwise matched pixel for pixel \cite{riochet2022}. A model passes a pair if it is more surprised by the impossible video. The paradigm comes from developmental psychology and has been used to evaluate learned models of physics \cite{piloto2022,weihs2022}.
+
+For video models that predict in a learned representation space, surprise has a concrete definition: the model sees the first frames of a clip, predicts the representation of what comes next, and the surprise at each moment is the distance between that prediction and the representation of what actually happens. Garrido et al.\ applied this to V-JEPA \cite{bardes2024} and reported a pairwise accuracy of 98\% on the IntPhys dev set for their flagship ViT-H model, with the context length tuned per property, with pixel-prediction and multimodal language-model baselines near chance, and above-chance results on two further benchmarks (GRASP and InfLevel-lab), without physics-specific training \cite{garrido2025}. This has been taken as evidence that predicting in latent space is enough to pick up some physical structure.
+
+The accuracy number leaves a question open. A prediction error is large whenever the future is hard to predict. A ball that passes through a wall is impossible; a camera that jolts sideways is perfectly possible and still hard to anticipate. If the surprise signal responds to both, pairwise VoE accuracy on a benchmark whose impossible clips are also unpredictable could be high for reasons unrelated to physics. If it responds mainly to impossibility, the accuracy figure means what it appears to mean. Either answer is informative, and accuracy cannot distinguish them.
+
+We train nothing. We test the surprise signal of frozen models directly, using deterministic edits to the IntPhys videos. The analysis plan and decision rules were pre-registered before any edited-condition output existed, with edit strengths calibrated on a separate split.
+
+\begin{enumerate}
+\item \textbf{Invariance.} Does the pairwise verdict survive edits that change appearance but not physics (blur, noise, compression, brightness, zoom, flips, frame dropping), applied identically to both clips of a pair?
+\item \textbf{Specificity.} Does surprise separate real violations from physically possible abrupt events (a lighting step, a camera jolt, a sudden zoom) whose pixel change is scaled to match that of the violations, at near-threshold magnitude? Frame-difference baselines serve as a reference.
+\item \textbf{Positive controls.} Does surprise rise when we create a violation ourselves, by flipping a clip vertically or reversing it in time? This checks that the pipeline can detect what it should.
+\end{enumerate}
+
+We run these tests on the public V-JEPA ViT-L checkpoint, which is the confirmatory model, and descriptively on V-JEPA~2 \cite{assran2025}, together with a randomly initialised network and trivial pixel baselines. Section~\ref{sec:method} describes the protocol. Our findings are limits on what the instrument can show. The public checkpoint does not reach the published ViT-H accuracy, its verdicts are not stable under an imperceptible perturbation, our positive controls were not met, and the pre-registered specificity test could not reach the detection level it requires, so it supports no claim in either direction. Sections~\ref{sec:results} and~\ref{sec:discussion} report all of this, including what the pre-registration did not anticipate.

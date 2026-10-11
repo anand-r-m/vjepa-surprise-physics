@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\caption{Ablations for M1 (V-JEPA ViT-L). Clean = IntPhys-dev pairwise accuracy in \% (tie-half) under the stated aggregation (mean for the A2 rows and the primary row; full-clip max for the full-clip-max row); $A_0$ = clean accuracy under the specificity aggregation of that row. $A$, $D_1$, $D_2$ as in Table~\ref{tab:t5} (supplement). A3 (dose-response) is Table~\ref{tab:t2b} and Fig.~\ref{fig:f3}. Fixed $C=2$ gives below-chance clean accuracy, so the default minimum over $C$ is dominated by the $C=2$ column.}
+\label{tab:t4}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Setting & Clean (\%) & $A_0$ (\%) & $A$ [95\% CI] & $D_1$ [CI] & $D_2$ [CI] \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{A1 aggregation}} \\
+Event-aligned max, min over $C$ (primary) & 80.8 & 72.2 & 0.546 [0.501, 0.591] & 0.211 [0.159, 0.263] & 0.166 [0.116, 0.219] \\
+Full-clip max & 72.5 & 72.5 & 0.553 [0.513, 0.593] & 0.158 [0.110, 0.209] & 0.082 [0.036, 0.128] \\
+Full-clip mean & 80.8 & 80.8 & 0.593 [0.545, 0.643] & 0.215 [0.153, 0.277] & 0.148 [0.104, 0.195] \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{A2 context length (min over $C$ = primary row)}} \\
+Fixed $C=2$ (event-aligned max) & 34.4 & 48.9 & 0.438 [0.388, 0.487] & 0.087 [0.029, 0.146] & 0.063 [0.006, 0.122] \\
+Fixed $C=6$ (event-aligned max) & 79.2 & 65.0 & 0.508 [0.460, 0.556] & 0.188 [0.139, 0.241] & 0.142 [0.093, 0.193] \\
+Fixed $C=10$ (event-aligned max) & 78.9 & 64.7 & 0.528 [0.476, 0.581] & 0.229 [0.181, 0.275] & 0.191 [0.140, 0.243] \\
+\bottomrule
+\end{tabular}
+\end{table*}

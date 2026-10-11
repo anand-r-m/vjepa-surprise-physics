@@ -1,0 +1,70 @@
+{
+ "group": "m2_dose_inv_s1_b",
+ "dev_dataset": "intphys-dev-npz",
+ "runs": [
+  {
+   "run_id": "P4_M2_ipdev_jpeg-low_s1",
+   "model": "M2",
+   "edit": {
+    "name": "jpeg",
+    "strength": "low"
+   },
+   "seed": 1,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_jpeg-mid_s1",
+   "model": "M2",
+   "edit": {
+    "name": "jpeg",
+    "strength": "mid"
+   },
+   "seed": 1,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_zoom-low_s1",
+   "model": "M2",
+   "edit": {
+    "name": "zoom",
+    "strength": "low"
+   },
+   "seed": 1,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P4_M2_ipdev_zoom-mid_s1",
+   "model": "M2",
+   "edit": {
+    "name": "zoom",
+    "strength": "mid"
+   },
+   "seed": 1,
+   "members": "all",
+   "baselines": true,
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2
+  }
+ ]
+}

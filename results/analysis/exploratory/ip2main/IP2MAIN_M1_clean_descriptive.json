@@ -1,0 +1,679 @@
+{
+ "n_videos": 1012,
+ "n_pairs": 506,
+ "n_overlap_videos": 8,
+ "n_pairs_with_overlap": 4,
+ "tau_from": "full Main clean run (2e-4 x median per-video score of this aggregation)",
+ "S": {
+  "mean": {
+   "tau": 0.00011154333493288827,
+   "all": {
+    "n": 506,
+    "acc_tiehalf": 0.4762845849802372,
+    "acc_strict": 0.4782608695652174,
+    "n_ties": 30,
+    "wilson95": [
+     0.4331106712808776,
+     0.5198158717023839
+    ],
+    "cluster_boot95": [
+     0.4367588932806324,
+     0.5158102766798419
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.4666666666666667,
+      "acc_strict": 0.475,
+      "n_ties": 8
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.42083333333333334,
+      "acc_strict": 0.4166666666666667,
+      "n_ties": 7
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.49583333333333335,
+      "acc_strict": 0.5,
+      "n_ties": 11
+     },
+     "solidity": {
+      "n": 146,
+      "acc_tiehalf": 0.5136986301369864,
+      "acc_strict": 0.5136986301369864,
+      "n_ties": 4
+     }
+    }
+   },
+   "without_debug_overlap": {
+    "n": 502,
+    "acc_tiehalf": 0.4760956175298805,
+    "acc_strict": 0.47808764940239046,
+    "n_ties": 30,
+    "wilson95": [
+     0.4327542577152286,
+     0.519800046447428
+    ],
+    "cluster_boot95": [
+     0.4352589641434263,
+     0.5159362549800797
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.4666666666666667,
+      "acc_strict": 0.475,
+      "n_ties": 8
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.42083333333333334,
+      "acc_strict": 0.4166666666666667,
+      "n_ties": 7
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.49583333333333335,
+      "acc_strict": 0.5,
+      "n_ties": 11
+     },
+     "solidity": {
+      "n": 142,
+      "acc_tiehalf": 0.5140845070422535,
+      "acc_strict": 0.5140845070422535,
+      "n_ties": 4
+     }
+    }
+   }
+  },
+  "max": {
+   "tau": 0.00011485457420349121,
+   "all": {
+    "n": 506,
+    "acc_tiehalf": 0.5049407114624506,
+    "acc_strict": 0.5059288537549407,
+    "n_ties": 11,
+    "wilson95": [
+     0.4615045092878644,
+     0.548302460923956
+    ],
+    "cluster_boot95": [
+     0.4644268774703557,
+     0.5464426877470355
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.5333333333333333,
+      "acc_strict": 0.5333333333333333,
+      "n_ties": 0
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.48333333333333334,
+      "acc_strict": 0.475,
+      "n_ties": 2
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.45,
+      "acc_strict": 0.4583333333333333,
+      "n_ties": 4
+     },
+     "solidity": {
+      "n": 146,
+      "acc_tiehalf": 0.5445205479452054,
+      "acc_strict": 0.547945205479452,
+      "n_ties": 5
+     }
+    }
+   },
+   "without_debug_overlap": {
+    "n": 502,
+    "acc_tiehalf": 0.5049800796812749,
+    "acc_strict": 0.5059760956175299,
+    "n_ties": 11,
+    "wilson95": [
+     0.4613720644845558,
+     0.5485124554815575
+    ],
+    "cluster_boot95": [
+     0.4631474103585657,
+     0.547808764940239
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.5333333333333333,
+      "acc_strict": 0.5333333333333333,
+      "n_ties": 0
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.48333333333333334,
+      "acc_strict": 0.475,
+      "n_ties": 2
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.45,
+      "acc_strict": 0.4583333333333333,
+      "n_ties": 4
+     },
+     "solidity": {
+      "n": 142,
+      "acc_tiehalf": 0.545774647887324,
+      "acc_strict": 0.5492957746478874,
+      "n_ties": 5
+     }
+    }
+   }
+  }
+ },
+ "B1": {
+  "mean": {
+   "tau": 6.296700669233413e-06,
+   "all": {
+    "n": 506,
+    "acc_tiehalf": 0.5118577075098815,
+    "acc_strict": 0.5118577075098815,
+    "n_ties": 8,
+    "wilson95": [
+     0.46837940002405504,
+     0.5551573284843144
+    ],
+    "cluster_boot95": [
+     0.47035573122529645,
+     0.5543478260869565
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.5708333333333333,
+      "acc_strict": 0.575,
+      "n_ties": 5
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.4625,
+      "acc_strict": 0.4583333333333333,
+      "n_ties": 1
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.49583333333333335,
+      "acc_strict": 0.5,
+      "n_ties": 1
+     },
+     "solidity": {
+      "n": 146,
+      "acc_tiehalf": 0.5171232876712328,
+      "acc_strict": 0.5136986301369864,
+      "n_ties": 1
+     }
+    }
+   },
+   "without_debug_overlap": {
+    "n": 502,
+    "acc_tiehalf": 0.5119521912350598,
+    "acc_strict": 0.5119521912350598,
+    "n_ties": 8,
+    "wilson95": [
+     0.4683014397832636,
+     0.5554214081354081
+    ],
+    "cluster_boot95": [
+     0.46912350597609564,
+     0.5537848605577689
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.5708333333333333,
+      "acc_strict": 0.575,
+      "n_ties": 5
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.4625,
+      "acc_strict": 0.4583333333333333,
+      "n_ties": 1
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.49583333333333335,
+      "acc_strict": 0.5,
+      "n_ties": 1
+     },
+     "solidity": {
+      "n": 142,
+      "acc_tiehalf": 0.5176056338028169,
+      "acc_strict": 0.5140845070422535,
+      "n_ties": 1
+     }
+    }
+   }
+  },
+  "max": {
+   "tau": 1.2904883921146393e-05,
+   "all": {
+    "n": 506,
+    "acc_tiehalf": 0.5158102766798419,
+    "acc_strict": 0.5237154150197628,
+    "n_ties": 14,
+    "wilson95": [
+     0.47231161289046586,
+     0.55907069178736
+    ],
+    "cluster_boot95": [
+     0.4743083003952569,
+     0.5563241106719368
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.5291666666666667,
+      "acc_strict": 0.5333333333333333,
+      "n_ties": 1
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.5541666666666667,
+      "acc_strict": 0.5666666666666667,
+      "n_ties": 5
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.5,
+      "acc_strict": 0.5,
+      "n_ties": 4
+     },
+     "solidity": {
+      "n": 146,
+      "acc_tiehalf": 0.4863013698630137,
+      "acc_strict": 0.5,
+      "n_ties": 4
+     }
+    }
+   },
+   "without_debug_overlap": {
+    "n": 502,
+    "acc_tiehalf": 0.5139442231075697,
+    "acc_strict": 0.5219123505976095,
+    "n_ties": 14,
+    "wilson95": [
+     0.4702828066185757,
+     0.5573938492865412
+    ],
+    "cluster_boot95": [
+     0.47310756972111556,
+     0.5557768924302788
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.5291666666666667,
+      "acc_strict": 0.5333333333333333,
+      "n_ties": 1
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.5541666666666667,
+      "acc_strict": 0.5666666666666667,
+      "n_ties": 5
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.5,
+      "acc_strict": 0.5,
+      "n_ties": 4
+     },
+     "solidity": {
+      "n": 142,
+      "acc_tiehalf": 0.4788732394366197,
+      "acc_strict": 0.49295774647887325,
+      "n_ties": 4
+     }
+    }
+   }
+  }
+ },
+ "B2": {
+  "mean": {
+   "tau": 1.2665418425903602e-05,
+   "all": {
+    "n": 506,
+    "acc_tiehalf": 0.5187747035573123,
+    "acc_strict": 0.5197628458498024,
+    "n_ties": 19,
+    "wilson95": [
+     0.4752625415469087,
+     0.5620039452580095
+    ],
+    "cluster_boot95": [
+     0.4772727272727273,
+     0.558300395256917
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.5083333333333333,
+      "acc_strict": 0.5,
+      "n_ties": 6
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.4666666666666667,
+      "acc_strict": 0.4666666666666667,
+      "n_ties": 6
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.5375,
+      "acc_strict": 0.5416666666666666,
+      "n_ties": 5
+     },
+     "solidity": {
+      "n": 146,
+      "acc_tiehalf": 0.5547945205479452,
+      "acc_strict": 0.5616438356164384,
+      "n_ties": 2
+     }
+    }
+   },
+   "without_debug_overlap": {
+    "n": 502,
+    "acc_tiehalf": 0.5189243027888446,
+    "acc_strict": 0.5199203187250996,
+    "n_ties": 19,
+    "wilson95": [
+     0.4752392305713812,
+     0.562321945299849
+    ],
+    "cluster_boot95": [
+     0.47808764940239046,
+     0.5597609561752988
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.5083333333333333,
+      "acc_strict": 0.5,
+      "n_ties": 6
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.4666666666666667,
+      "acc_strict": 0.4666666666666667,
+      "n_ties": 6
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.5375,
+      "acc_strict": 0.5416666666666666,
+      "n_ties": 5
+     },
+     "solidity": {
+      "n": 142,
+      "acc_tiehalf": 0.5563380281690141,
+      "acc_strict": 0.5633802816901409,
+      "n_ties": 2
+     }
+    }
+   }
+  },
+  "max": {
+   "tau": 2.5743585824966432e-05,
+   "all": {
+    "n": 506,
+    "acc_tiehalf": 0.5,
+    "acc_strict": 0.5,
+    "n_ties": 20,
+    "wilson95": [
+     0.4565989212007332,
+     0.5434010787992668
+    ],
+    "cluster_boot95": [
+     0.4575098814229249,
+     0.5444664031620553
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.44583333333333336,
+      "acc_strict": 0.43333333333333335,
+      "n_ties": 7
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.5166666666666667,
+      "acc_strict": 0.5166666666666667,
+      "n_ties": 4
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.525,
+      "acc_strict": 0.525,
+      "n_ties": 2
+     },
+     "solidity": {
+      "n": 146,
+      "acc_tiehalf": 0.5102739726027398,
+      "acc_strict": 0.5205479452054794,
+      "n_ties": 7
+     }
+    }
+   },
+   "without_debug_overlap": {
+    "n": 502,
+    "acc_tiehalf": 0.5,
+    "acc_strict": 0.49800796812749004,
+    "n_ties": 18,
+    "wilson95": [
+     0.4564276595698755,
+     0.5435723404301245
+    ],
+    "cluster_boot95": [
+     0.45617529880478086,
+     0.5438247011952191
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.44583333333333336,
+      "acc_strict": 0.43333333333333335,
+      "n_ties": 7
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.5166666666666667,
+      "acc_strict": 0.5166666666666667,
+      "n_ties": 4
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.525,
+      "acc_strict": 0.525,
+      "n_ties": 2
+     },
+     "solidity": {
+      "n": 142,
+      "acc_tiehalf": 0.5105633802816901,
+      "acc_strict": 0.5140845070422535,
+      "n_ties": 5
+     }
+    }
+   }
+  }
+ },
+ "B3": {
+  "mean": {
+   "tau": 3.830695976229275e-05,
+   "all": {
+    "n": 506,
+    "acc_tiehalf": 0.466403162055336,
+    "acc_strict": 0.466403162055336,
+    "n_ties": 10,
+    "wilson95": [
+     0.4233525711528911,
+     0.5099600314067293
+    ],
+    "cluster_boot95": [
+     0.424901185770751,
+     0.5069169960474308
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.475,
+      "acc_strict": 0.475,
+      "n_ties": 0
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.4166666666666667,
+      "acc_strict": 0.425,
+      "n_ties": 4
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.5,
+      "acc_strict": 0.48333333333333334,
+      "n_ties": 4
+     },
+     "solidity": {
+      "n": 146,
+      "acc_tiehalf": 0.4726027397260274,
+      "acc_strict": 0.4794520547945205,
+      "n_ties": 2
+     }
+    }
+   },
+   "without_debug_overlap": {
+    "n": 502,
+    "acc_tiehalf": 0.46613545816733065,
+    "acc_strict": 0.46613545816733065,
+    "n_ties": 10,
+    "wilson95": [
+     0.4229195840154818,
+     0.5098656802149484
+    ],
+    "cluster_boot95": [
+     0.4252988047808765,
+     0.5069721115537849
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.475,
+      "acc_strict": 0.475,
+      "n_ties": 0
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.4166666666666667,
+      "acc_strict": 0.425,
+      "n_ties": 4
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.5,
+      "acc_strict": 0.48333333333333334,
+      "n_ties": 4
+     },
+     "solidity": {
+      "n": 142,
+      "acc_tiehalf": 0.47183098591549294,
+      "acc_strict": 0.4788732394366197,
+      "n_ties": 2
+     }
+    }
+   }
+  },
+  "max": {
+   "tau": 4.723269492387772e-05,
+   "all": {
+    "n": 506,
+    "acc_tiehalf": 0.4318181818181818,
+    "acc_strict": 0.43280632411067194,
+    "n_ties": 1,
+    "wilson95": [
+     0.38933317374655035,
+     0.47533063733032616
+    ],
+    "cluster_boot95": [
+     0.3893280632411067,
+     0.4733201581027668
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.4625,
+      "acc_strict": 0.4666666666666667,
+      "n_ties": 1
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.4166666666666667,
+      "acc_strict": 0.4166666666666667,
+      "n_ties": 0
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.425,
+      "acc_strict": 0.425,
+      "n_ties": 0
+     },
+     "solidity": {
+      "n": 146,
+      "acc_tiehalf": 0.4246575342465753,
+      "acc_strict": 0.4246575342465753,
+      "n_ties": 0
+     }
+    }
+   },
+   "without_debug_overlap": {
+    "n": 502,
+    "acc_tiehalf": 0.4312749003984064,
+    "acc_strict": 0.43227091633466136,
+    "n_ties": 1,
+    "wilson95": [
+     0.3886348753026451,
+     0.47495874916499276
+    ],
+    "cluster_boot95": [
+     0.3894422310756972,
+     0.47310756972111556
+    ],
+    "per_block": {
+     "continuity": {
+      "n": 120,
+      "acc_tiehalf": 0.4625,
+      "acc_strict": 0.4666666666666667,
+      "n_ties": 1
+     },
+     "immutability": {
+      "n": 120,
+      "acc_tiehalf": 0.4166666666666667,
+      "acc_strict": 0.4166666666666667,
+      "n_ties": 0
+     },
+     "permanence": {
+      "n": 120,
+      "acc_tiehalf": 0.425,
+      "acc_strict": 0.425,
+      "n_ties": 0
+     },
+     "solidity": {
+      "n": 142,
+      "acc_tiehalf": 0.4225352112676056,
+      "acc_strict": 0.4225352112676056,
+      "n_ties": 0
+     }
+    }
+   }
+  }
+ }
+}

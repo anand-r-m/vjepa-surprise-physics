@@ -1,0 +1,38 @@
+{
+ "item": "T1",
+ "script": "scripts/figs/t1_reproduction.py",
+ "outputs": [
+  "paper/tables/t1_reproduction.tex"
+ ],
+ "generated": "2026-10-10",
+ "verified_keys_used": {
+  "b2_clean_acc": "verified",
+  "clean.B1_P2.strict": "verified",
+  "clean.B1_P2.tiehalf": "mismatch",
+  "clean.B2_P2.strict": "verified",
+  "clean.M1H_fp16.strict": "verified",
+  "clean.M1_fp16.strict": "verified",
+  "clean.M1_fp32.strict": "verified",
+  "clean.M2_mi0.strict": "verified",
+  "clean.M2_old.strict": "verified",
+  "g1_m1_clean_acc": "verified",
+  "g1_vith_clean_acc": "mismatch",
+  "m1_fp16_clean_acc": "verified",
+  "m1_minus_b2_ci": "verified",
+  "m1_minus_b2_diff": "verified",
+  "m2_new_acc": "verified",
+  "m2_old_acc": "verified",
+  "m3.*": "pending"
+ },
+ "verified_keys_missing": [],
+ "input_files": [
+  "results/VERIFIED.json",
+  "results/analysis/p4/p4_clean_g1.json"
+ ],
+ "notes": [
+  "M0r row from results/analysis/p4/p4_clean_g1.json M0r_summary.mean (no VERIFIED key; mean over 3 inits)",
+  "Published column = literature value (98%) from docs/PREREGISTRATION.md s0 / notes/PROTOCOL_NOTES.md, not VERIFIED",
+  "M3 row = pending (m3.* pending in VERIFIED)",
+  "g1_vith_clean_acc and clean.B1_P2.tiehalf carry status mismatch (superseded-tau convention in analysis files); prereg-tau value used"
+ ]
+}

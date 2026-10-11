@@ -1,0 +1,60 @@
+{
+ "f0": 0.2148148148148148,
+ "f0_valid": false,
+ "per_edit": {
+  "halve_hold": {
+   "n": 180,
+   "n_excluded": 0,
+   "dacc": 0.019444444444444445,
+   "dacc_ci": [
+    -0.03333333333333333,
+    0.07222222222222222
+   ],
+   "flip": 0.2,
+   "flip_ci": [
+    0.14444444444444443,
+    0.25555555555555554
+   ],
+   "excess": -0.01481481481481478,
+   "excess_ci": [
+    -0.08148148148148149,
+    0.05185185185185187
+   ],
+   "sign": {
+    "n_discordant": 36,
+    "n_up": 18,
+    "n_down": 18,
+    "p": 1.0
+   },
+   "p_dacc_cluster": 0.525,
+   "p_flip_cluster": 0.6804,
+   "holm_sign": 1.0,
+   "holm_flip": 1.0,
+   "holm_dacc_cluster": 1.0,
+   "dacc_sig": false,
+   "dacc_sig_disagree": false,
+   "holm_flip_cluster": 1.0,
+   "decision": "inconclusive"
+  }
+ },
+ "EXPLORATORY": {
+  "reference": "P4_M1_ipdev_clean_s1 (clean skip-2)",
+  "run": "EXPL_M1_ipdev_halve_hold-high_s1",
+  "tau": 0.0001057012373910231,
+  "tie_value": 0.5,
+  "f0": 0.2148148148148148,
+  "clean_acc": 0.8083333333333333,
+  "halve_hold_acc": 0.8277777777777777,
+  "n_flipped_pairs_of_180": 36.0,
+  "ties_halve_hold": 10,
+  "ties_clean": 7,
+  "ties_dither": [
+   19,
+   17,
+   16
+  ],
+  "S_identical_to_clean": false,
+  "max_abs_S_diff": 0.04381066560745239,
+  "note": "family of one: the Holm fields in this file are Holm over 2 p-values (dacc, flip); not a pre-registered family"
+ }
+}

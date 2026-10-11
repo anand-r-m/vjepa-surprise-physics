@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vjepa-study"
+version = "0.1.0"
+description = "Is latent surprise about physics? Edits, analysis and figures."
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "opencv-python-headless", "pyyaml", "matplotlib"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+vjepa_study = ["*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

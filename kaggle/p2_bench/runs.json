@@ -1,0 +1,102 @@
+{
+ "group": "p2_bench",
+ "dev_dataset": "intphys-dev-npz",
+ "note": "sharding + precision benchmark on the 12-video set",
+ "runs": [
+  {
+   "run_id": "P2B_M1_ipdev_clean12_fp32_1gpu_s1",
+   "model": "M1",
+   "dataset": "ipdev",
+   "subset": {
+    "scenes": [
+     "O1/01",
+     "O2/01",
+     "O3/01"
+    ]
+   },
+   "frame_step": 2,
+   "edit": null,
+   "seed": 1,
+   "baselines": true,
+   "store_feats": true,
+   "precision": "fp32",
+   "n_gpus": 1
+  },
+  {
+   "run_id": "P2B_M1_ipdev_clean12_fp32_2gpu_s1",
+   "model": "M1",
+   "dataset": "ipdev",
+   "subset": {
+    "scenes": [
+     "O1/01",
+     "O2/01",
+     "O3/01"
+    ]
+   },
+   "frame_step": 2,
+   "edit": null,
+   "seed": 1,
+   "baselines": true,
+   "store_feats": true,
+   "precision": "fp32",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P2B_M1_ipdev_clean12_fp16_1gpu_s1",
+   "model": "M1",
+   "dataset": "ipdev",
+   "subset": {
+    "scenes": [
+     "O1/01",
+     "O2/01",
+     "O3/01"
+    ]
+   },
+   "frame_step": 2,
+   "edit": null,
+   "seed": 1,
+   "baselines": true,
+   "store_feats": true,
+   "precision": "fp16",
+   "n_gpus": 1
+  },
+  {
+   "run_id": "P2B_M1_ipdev_clean12_fp16_2gpu_s1",
+   "model": "M1",
+   "dataset": "ipdev",
+   "subset": {
+    "scenes": [
+     "O1/01",
+     "O2/01",
+     "O3/01"
+    ]
+   },
+   "frame_step": 2,
+   "edit": null,
+   "seed": 1,
+   "baselines": true,
+   "store_feats": true,
+   "precision": "fp16",
+   "n_gpus": 2
+  },
+  {
+   "run_id": "P2B_M1_ipdev_clean12_bf16_1gpu_s1",
+   "model": "M1",
+   "dataset": "ipdev",
+   "subset": {
+    "scenes": [
+     "O1/01",
+     "O2/01",
+     "O3/01"
+    ]
+   },
+   "frame_step": 2,
+   "edit": null,
+   "seed": 1,
+   "baselines": true,
+   "store_feats": true,
+   "precision": "bf16",
+   "n_gpus": 1
+  }
+ ]
+}

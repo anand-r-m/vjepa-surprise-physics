@@ -1,0 +1,7 @@
+[1] 083861b17a8b3f4bef7e3aaad0b960318a5ea19ca98258fe2bfd700d11343e3d dev=cuda:0 windows=17 S[min,mean,max]=(0.5396,0.5697,0.6061) elapsed=7.1s
+[2] 3790b69ff5bd127e237581effb59dca012b191478f28ae9036fe215bb4fd3a18 dev=cuda:0 windows=17 S[min,mean,max]=(0.5470,0.5663,0.6041) elapsed=12.3s
+[3] 0996318787089d31d84af8327bb044e77120cd0a6c6eb7425a179f932369146b dev=cuda:0 windows=17 S[min,mean,max]=(0.5478,0.5838,0.6231) elapsed=17.4s
+[4] 1bfb101f76515eca026da816f93ef12139080b5aaeca609f49bf26b0135a15df dev=cuda:0 windows=17 S[min,mean,max]=(0.5467,0.5824,0.6274) elapsed=22.5s
+[5] fb11d35c2c4a9dfb0e37bc57dc9a39fb20351fba0b841e306f8e167aa0079a8e dev=cuda:0 windows=17 S[min,mean,max]=(0.5576,0.5762,0.5997) elapsed=27.7s
+[6] 7a296b55aa718b71e24b2d20ead38e4640ee11736a55de772ecabac6df1f9a2f dev=cuda:0 windows=17 S[min,mean,max]=(0.5566,0.5746,0.6047) elapsed=32.8s
+done P2D_M1_ip2dbg_fp16_clean_s1 n=6 wall=32.8s model=30.2s

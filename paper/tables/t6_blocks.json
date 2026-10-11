@@ -1,0 +1,40 @@
+{
+ "item": "T6",
+ "script": "scripts/figs/t6_blocks.py",
+ "outputs": [
+  "paper/tables/t6_blocks.tex"
+ ],
+ "generated": "2026-10-10",
+ "verified_keys_used": {
+  "ip2main.B1.all.continuity.tiehalf": "verified",
+  "ip2main.B1.all.immutability.tiehalf": "verified",
+  "ip2main.B1.all.permanence.tiehalf": "verified",
+  "ip2main.B1.all.solidity.tiehalf": "verified",
+  "ip2main.B1.all.tiehalf": "verified",
+  "ip2main.B2.all.continuity.tiehalf": "verified",
+  "ip2main.B2.all.immutability.tiehalf": "verified",
+  "ip2main.B2.all.permanence.tiehalf": "verified",
+  "ip2main.B2.all.solidity.tiehalf": "verified",
+  "ip2main.B2.all.tiehalf": "verified",
+  "ip2main.B3.all.continuity.tiehalf": "verified",
+  "ip2main.B3.all.immutability.tiehalf": "verified",
+  "ip2main.B3.all.permanence.tiehalf": "verified",
+  "ip2main.B3.all.solidity.tiehalf": "verified",
+  "ip2main.B3.all.tiehalf": "verified",
+  "ip2main.M1.all.continuity.tiehalf": "verified",
+  "ip2main.M1.all.immutability.tiehalf": "verified",
+  "ip2main.M1.all.n_pairs": "verified",
+  "ip2main.M1.all.permanence.tiehalf": "verified",
+  "ip2main.M1.all.solidity.tiehalf": "verified",
+  "ip2main.M1.all.tiehalf": "verified"
+ },
+ "verified_keys_missing": [],
+ "input_files": [
+  "results/VERIFIED.json",
+  "results/analysis/exploratory/ip2main/IP2MAIN_M1_clean_descriptive.json",
+  "results/analysis/p4/clean.json"
+ ],
+ "notes": [
+  "IntPhys dev per-block accuracies from results/analysis/p4/clean.json (no VERIFIED key); Main values from VERIFIED ip2main.*"
+ ]
+}

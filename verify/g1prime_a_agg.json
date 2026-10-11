@@ -1,0 +1,80 @@
+{
+ "O1": {
+  "ours_M1_acc_filtered_avg": 73.33333333333333,
+  "pairs": 60,
+  "ours_mean_score": 0.5311645917156163,
+  "ours_sd_score": 0.01703477563472283,
+  "vit-l-rope-vm2m": {
+   "acc": 85.0,
+   "mean_score": 0.5476987403689646,
+   "sd_score": 0.025057200839781572
+  },
+  "vit-l-rope-howto": {
+   "acc": 91.66666666666666,
+   "mean_score": 0.5419131543268175,
+   "sd_score": 0.024181780070877342
+  },
+  "vit-h-rope-vm2m": {
+   "acc": 95.0,
+   "mean_score": 0.5483876308681918,
+   "sd_score": 0.018268210146109402
+  },
+  "vit-h-rope-howto": {
+   "acc": 86.66666666666667,
+   "mean_score": 0.5585823350969483,
+   "sd_score": 0.019608757887561442
+  }
+ },
+ "O2": {
+  "ours_M1_acc_filtered_avg": 83.33333333333333,
+  "pairs": 60,
+  "ours_mean_score": 0.5310965186824986,
+  "ours_sd_score": 0.017171467235954786,
+  "vit-l-rope-vm2m": {
+   "acc": 91.66666666666666,
+   "mean_score": 0.5482650250488637,
+   "sd_score": 0.02473910077651421
+  },
+  "vit-l-rope-howto": {
+   "acc": 88.33333333333333,
+   "mean_score": 0.5446067270841085,
+   "sd_score": 0.023792840189210608
+  },
+  "vit-h-rope-vm2m": {
+   "acc": 100.0,
+   "mean_score": 0.5499069503855473,
+   "sd_score": 0.018858299582109883
+  },
+  "vit-h-rope-howto": {
+   "acc": 90.0,
+   "mean_score": 0.5606045293457368,
+   "sd_score": 0.019276551776438104
+  }
+ },
+ "O3": {
+  "ours_M1_acc_filtered_avg": 85.0,
+  "pairs": 60,
+  "ours_mean_score": 0.5304046789074645,
+  "ours_sd_score": 0.01416190259356501,
+  "vit-l-rope-vm2m": {
+   "acc": 91.66666666666666,
+   "mean_score": 0.5481105947611379,
+   "sd_score": 0.021769841395248197
+  },
+  "vit-l-rope-howto": {
+   "acc": 90.0,
+   "mean_score": 0.5461756799297005,
+   "sd_score": 0.025154026289333675
+  },
+  "vit-h-rope-vm2m": {
+   "acc": 95.0,
+   "mean_score": 0.554131177652116,
+   "sd_score": 0.01866899742938324
+  },
+  "vit-h-rope-howto": {
+   "acc": 90.0,
+   "mean_score": 0.562124593848107,
+   "sd_score": 0.018878744944029063
+  }
+ }
+}

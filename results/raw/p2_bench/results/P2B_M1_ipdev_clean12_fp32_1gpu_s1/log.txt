@@ -1,0 +1,13 @@
+[1] O1/01/2 dev=cuda:0 windows=17 S[min,mean,max]=(0.5404,0.5625,0.6074) elapsed=24.4s
+[2] O1/01/1 dev=cuda:0 windows=17 S[min,mean,max]=(0.5368,0.5602,0.6074) elapsed=44.5s
+[3] O1/01/4 dev=cuda:0 windows=17 S[min,mean,max]=(0.5347,0.5583,0.6074) elapsed=65.2s
+[4] O1/01/3 dev=cuda:0 windows=17 S[min,mean,max]=(0.5370,0.5620,0.6074) elapsed=86.4s
+[5] O2/01/1 dev=cuda:0 windows=17 S[min,mean,max]=(0.5352,0.5601,0.6051) elapsed=107.1s
+[6] O2/01/3 dev=cuda:0 windows=17 S[min,mean,max]=(0.5352,0.5611,0.6051) elapsed=127.7s
+[7] O2/01/2 dev=cuda:0 windows=17 S[min,mean,max]=(0.5355,0.5612,0.6045) elapsed=148.4s
+[8] O2/01/4 dev=cuda:0 windows=17 S[min,mean,max]=(0.5355,0.5607,0.6045) elapsed=169.2s
+[9] O3/01/4 dev=cuda:0 windows=17 S[min,mean,max]=(0.5247,0.5456,0.5719) elapsed=190.0s
+[10] O3/01/1 dev=cuda:0 windows=17 S[min,mean,max]=(0.5297,0.5470,0.5711) elapsed=210.7s
+[11] O3/01/3 dev=cuda:0 windows=17 S[min,mean,max]=(0.5294,0.5464,0.5699) elapsed=231.4s
+[12] O3/01/2 dev=cuda:0 windows=17 S[min,mean,max]=(0.5247,0.5461,0.5702) elapsed=252.2s
+done P2B_M1_ipdev_clean12_fp32_1gpu_s1 n=12 wall=252.2s model=247.5s

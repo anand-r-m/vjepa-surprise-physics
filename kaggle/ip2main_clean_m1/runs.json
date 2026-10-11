@@ -1,0 +1,19 @@
+{
+ "group": "ip2main_clean_m1",
+ "ip2_dataset": "intphys2",
+ "runs": [
+  {
+   "run_id": "P4_M1_ip2main_clean_s1",
+   "model": "M1",
+   "dataset": "ip2main",
+   "frame_step": 2,
+   "edit": null,
+   "seed": 1,
+   "members": "all",
+   "baselines": true,
+   "store_feats": true,
+   "precision": "fp16",
+   "n_gpus": 2
+  }
+ ]
+}

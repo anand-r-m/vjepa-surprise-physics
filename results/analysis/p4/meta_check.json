@@ -1,0 +1,17 @@
+{
+ "ok": true,
+ "mismatches": [],
+ "missing": [],
+ "dirty": [],
+ "n_runs": 107,
+ "allowed_heads": [
+  "606d7324dd814c1ec21077b8091fbd7b2dc866b7",
+  "beea21e0dd289df2d6ee73088729b548fbe0ede0",
+  "4c4017bd0c9fd7185490a754fd39ffac0bc9c974",
+  "649988dfe284e950d167a9f7a1ec91e3dc74a3f7",
+  "df52a7c41d601d1a61629b659b60c98e2ec67efa",
+  "b8f604b3951ee6a3a7f3a0299f9c3f5b0a6a92f5",
+  "28f44a7a047a67b449f46205b6c6a3b474bbccfd"
+ ],
+ "bypassed": false
+}

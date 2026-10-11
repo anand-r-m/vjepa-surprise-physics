@@ -1,0 +1,13 @@
+[1] O1/01/2 windows=17 S[min,mean,max]=(0.5404,0.5625,0.6074) elapsed=8.3s
+[2] O1/01/1 windows=17 S[min,mean,max]=(0.5364,0.5602,0.6074) elapsed=12.9s
+[3] O1/01/4 windows=17 S[min,mean,max]=(0.5346,0.5584,0.6074) elapsed=17.5s
+[4] O1/01/3 windows=17 S[min,mean,max]=(0.5367,0.5620,0.6074) elapsed=22.2s
+[5] O2/01/1 windows=17 S[min,mean,max]=(0.5351,0.5601,0.6053) elapsed=27.9s
+[6] O2/01/3 windows=17 S[min,mean,max]=(0.5351,0.5611,0.6053) elapsed=32.6s
+[7] O2/01/2 windows=17 S[min,mean,max]=(0.5356,0.5613,0.6045) elapsed=37.3s
+[8] O2/01/4 windows=17 S[min,mean,max]=(0.5356,0.5608,0.6045) elapsed=42.0s
+[9] O3/01/4 windows=17 S[min,mean,max]=(0.5247,0.5456,0.5720) elapsed=47.9s
+[10] O3/01/1 windows=17 S[min,mean,max]=(0.5297,0.5471,0.5716) elapsed=52.7s
+[11] O3/01/3 windows=17 S[min,mean,max]=(0.5293,0.5464,0.5698) elapsed=57.5s
+[12] O3/01/2 windows=17 S[min,mean,max]=(0.5247,0.5461,0.5701) elapsed=62.3s
+done P1T_M1_ipdev_clean12_s1 n=12 wall=62.3s model=55.6s

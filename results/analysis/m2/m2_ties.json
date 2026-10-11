@@ -1,0 +1,138 @@
+{
+ "H1_mean_agg": {
+  "tau": 0.00011086137154523064,
+  "clean": {
+   "n_tie_tau": 17,
+   "n_exact0": 0
+  },
+  "clean-skip4": {
+   "n_tie_tau": 8,
+   "n_exact0": 0
+  },
+  "brightness-high s1": {
+   "n_tie_tau": 9,
+   "n_exact0": 0
+  },
+  "brightness-high s2": {
+   "n_tie_tau": 10,
+   "n_exact0": 0
+  },
+  "brightness-high s3": {
+   "n_tie_tau": 16,
+   "n_exact0": 0
+  },
+  "noise-high s1": {
+   "n_tie_tau": 19,
+   "n_exact0": 0
+  },
+  "noise-high s2": {
+   "n_tie_tau": 22,
+   "n_exact0": 0
+  },
+  "noise-high s3": {
+   "n_tie_tau": 23,
+   "n_exact0": 0
+  },
+  "blur-high s1": {
+   "n_tie_tau": 19,
+   "n_exact0": 0
+  },
+  "jpeg-high s1": {
+   "n_tie_tau": 27,
+   "n_exact0": 0
+  },
+  "zoom-high s1": {
+   "n_tie_tau": 15,
+   "n_exact0": 0
+  },
+  "hflip-high s1": {
+   "n_tie_tau": 9,
+   "n_exact0": 0
+  },
+  "fps_halve-high s1": {
+   "n_tie_tau": 8,
+   "n_exact0": 0
+  },
+  "dither-on s1": {
+   "n_tie_tau": 8,
+   "n_exact0": 0
+  },
+  "dither-on s2": {
+   "n_tie_tau": 22,
+   "n_exact0": 0
+  },
+  "dither-on s3": {
+   "n_tie_tau": 18,
+   "n_exact0": 0
+  }
+ },
+ "fps_halve_equals_skip4_bitwise": true,
+ "H2_event_aligned_max": {
+  "M2": {
+   "tau": 0.00011566053032875061,
+   "clean_dv_tie": 34,
+   "exact0": 32
+  },
+  "B1": {
+   "tau": 1.4643508940935136e-06,
+   "clean_dv_tie": 42,
+   "exact0": 36
+  },
+  "B2": {
+   "tau": 2.9204766266047954e-06,
+   "clean_dv_tie": 42,
+   "exact0": 34
+  },
+  "B3": {
+   "tau": 4.463706463575363e-05,
+   "clean_dv_tie": 42,
+   "exact0": 37
+  },
+  "abrupt_tie": {
+   "lighting_global": [
+    89,
+    89,
+    89
+   ],
+   "lighting_local": [
+    15,
+    15,
+    15
+   ],
+   "jolt_base": [
+    19,
+    29,
+    15
+   ],
+   "zoom_base": [
+    19
+   ]
+  },
+  "auroc_cmp_in_band": {
+   "lighting_global": [
+    0.1041,
+    0.1041,
+    0.1041
+   ],
+   "lighting_local": [
+    0.0224,
+    0.0224,
+    0.0224
+   ],
+   "jolt_base": [
+    0.0318,
+    0.0417,
+    0.027
+   ],
+   "zoom_base": [
+    0.0301
+   ]
+  }
+ },
+ "H3": {
+  "vflip": 3,
+  "hflip": 6,
+  "time_reversal": 5,
+  "tau": 0.00011566053032875061
+ }
+}

@@ -1,0 +1,41 @@
+# ANALYSIS CONFORMANCE (docs/PREREGISTRATION.md DRAFT v2, sections 2, 4, 6, 7, 9)
+
+Module `src/vjepa_study/analysis/prereg.py` (P), `analysis/metrics.py` (M), `analysis/baselines.py`, `amend.py`; tests in `tests/`. Driver: `scripts/run_analysis.py` (stages `clean h1 h2 h3`; reads `results/runs/<run_id>/`, writes `results/analysis/*.json`; end-to-end test on synthetic run dirs in `tests/test_run_analysis.py`). None was run on real edited dev data. Status: OK = implemented and unit-tested; FIXED = was a gap/deviation, fixed now; MANUAL = outside code.
+
+| # | Prereg item | Function | Test | Status / gap |
+|---|---|---|---|---|
+| 1 | §2 tau_m = 2e-4 x median of per-video score over the 360 clean videos (per-video score = mean over windows of min-over-C; alt = max-agg tau also stored) | `P.tau_m`, `P.video_scores`; `run_analysis.clean_stage`, `p4_clean_analysis.py` | `test_tau_and_tiehalf_rules`, e2e | OK. Prereg leaves the aggregation of "S_m" for the median implicit; mean-aggregation is used and tau for max-aggregation is reported next to it (differs by <10%). Decision for lead if tau should be aggregation-specific |
+| 2 | §2 tie rule: tie iff \|diff\| <= tau_m, counts 0.5; strict and exact-tie sensitivities | `P.y_tiehalf`, `P.y_strict`, `--tau-scale 0` | same | OK (strict in clean.json; exact-tie via `--tau-scale 0` for H1/H2/H3 stages; strict versions of H1/H2/H3 not separately emitted: strict now: `--tie-mode strict` for h1/h2/h3 -> `*_strict.json`, exact ties `--tau-scale 0` -> `*_exactties.json`; tests `test_strict_tie_sensitivities_h1_h2_h3`, `test_exact_tie_sensitivity_names_h2_h3`) |
+| 3 | §2 flip over {imp-higher, tie, poss-higher} | `P.flip3` (also `M.flip_rate_ties`) | `test_tau_and_tiehalf_rules` | OK |
+| 4 | §6 H1 pair-level y, flip averaged over 3 seeds; deterministic edits 1 seed | `P.h1_pair_level`, `P.seed_average`; stage `h1` | `test_h1_pair_level_seed_average_and_sign_test`, e2e | OK |
+| 5 | §6 exact two-sided sign test on pairs with y_e != y_0 | `P.sign_test_exact` | same | OK (was McNemar in `M.mcnemar_exact`, superseded) |
+| 6 | §6 Holm over 14 p-values per model (7 sign tests + 7 flip tests) | `P.h1_family` (uses `M.holm`) | `test_h1_family_invariant_violated_and_holm14` | OK. Disagreement rule: Delta-acc significance uses the cluster-bootstrap p (Holm-14), the sign-test Holm p stored next to it, `dacc_sig_disagree` flagged |
+| 7 | §6 paired flip-vs-floor cluster bootstrap: flip_e − f0 on the same draw, one-sided p(flip_e − f0 <= 0) | `P.h1_family` | same | OK |
+| 8 | §6 floor validity (f0 >= 10% -> descriptive) | `P.h1_family` (`f0_valid`), `P.h1_model_status` | `test_h1_floor_instability_and_exclusion_mask`, `test_h1_eligibility_and_status` | OK |
+| 9 | §6 eligibility: clean tie-half >= 80.0%; M1 judged on P2 fp32 run, M2 on its fp16 run | `P.h1_eligible`, `run_analysis --fp32-runs` | `test_eligibility_uses_fp32_run_and_A1_A2` | OK. Logging the M2 status in DECISIONS before opening M2 edited outputs is MANUAL |
+| 10 | §6 H1 decision rule (violated / invariant / inconclusive; invariant needs upper bound of flip−f0 < 5 pp) | `P.h1_decision` | e2e + family test | FIXED (the old `M.h1_decision` used "upper bound of flip < 10%"; superseded) |
+| 11 | §3 crop retention R < 90% exclusion; count reported | `amend.support_retention`, `scripts/make_retention.py` -> `run_analysis --retention`, `n_excluded` in h1 output | `test_support_retention`, `test_make_retention_synthetic`, `test_h1_floor_instability_and_exclusion_mask` | OK; the file is produced only post-freeze from dev pixels |
+| 12 | §3 frame-rate halving reference = skip-4 clean run (24 frames, 5 windows) | `amend.sampling_plan(halve=True)`, group `p4_clean_m1`, `h1_stage` compares fps_halve to the skip-4 clean verdicts | e2e (W=5 runs), `test_sampling_plan` | OK |
+| 13 | §4 t*_on / t*_off (label-free: first frame of the LAST run of >= 5 quiet frames, else T), transient flag, t*_on > 94 exclusion, fallback count | `amend.event_window`, `tau_rule` | `test_event_window_*` | FIXED (previous t_off rule differed when quiet runs are not at the end); exclusions used in `h2_stage` |
+| 14 | §4 per-pair matching, achieved ratio, match-failure flag, descriptors (L1, area fraction, onset diff, feature distance) | `amend.match_pair`, `make_matched_strengths.py` (ratio summary, onset_diff, area, onset_abrupt), `P.feature_distance` in `h2_stage` | `test_make_matched_strengths_synthetic`, e2e | OK. "Match target missed" flag is in `meta.mid_ratio_summary` (median, fraction in [0.9,1.1]); `P.match_missed` (median in [0.95,1.05], >=90% in [0.9,1.1]) flags types; `h2.json` gets `match_target_missed` and `sensitivity_exclude_missed_types` (A, D vs B1/B2, outcome without them); test `test_match_target_missed_filter` |
+| 15 | §6 H2 event-aligned max: W_i = {w : 4w+30 >= t*_on}, same set for all scores of pair i | `P.video_score(t_on=)`, `P._per_video_t` | `test_video_score_aggregations_and_event_window` | OK |
+| 16 | §6 per-type AUROC, mean over types, per seed then average, tie 0.5 within tau_m | `P.auroc_tau`, `P.h2_point` | `test_auroc_tau_and_h2_point_per_seed` | OK |
+| 17 | §6 foil accuracy | `P.foil_acc` (stage `h2`) | same | OK |
+| 18 | §6 bootstrap stratified by block, all models on same draw; A, D_k = A_M1 − A_Bk (k=1,2), intersection-union; A0 on same draws; R = (A−0.5)/(A0−0.5) | `P.h2_bootstrap` | `test_h2_bootstrap_intersection_union_and_a0` | OK |
+| 19 | §6 outcome table + detection-limited rule (A0 < 0.85 and Not specific/Partial) | `P.h2_outcome` | `test_h2_outcome_table`, `_reversed` | OK ("Specific" rows unchanged; M1/M2 same-row rule MANUAL) |
+| 20 | §6 T1 paired clean M1 − B2 | `P.paired_difference`; `clean_stage` | `test_strata_proxy_t1_wilson`, e2e | OK |
+| 21 | §6 H3 detection (a) vs p, (b) vflip vs hflip, tie-half at tau_m, full-clip max | `P.detection`, stage `h3` | `test_h3_and_g2` | OK |
+| 22 | §6 M0r difference: CI lower bound of det_M1 − det_M0r > 0 and (b) lower bound > 0.5 | `P.h3_analysis` | same | OK |
+| 23 | §7 G2: (a) >= 80% point and (b) lower bound > 0.5; reversal reported, not gating, <50% diagnostic flag | `P.g2_pass`, `h3_stage` (`reversal_below_half_diagnostic_needed`) | same | FIXED (old `M.g2_pass` used M1 − M0r CI) |
+| 24 | §9 stratification: block and visible/occluded proxy (D(t*_on) >= 0.5 mean D) | `P.abrupt_onset_proxy`, `P.stratified_values`, `P.h2_strata`; `onset_abrupt` from `make_matched_strengths.py` | strata test, e2e | OK (descriptive; H1/H3 strata not emitted: GAP-minor) |
+| 25 | §1 A1 (other aggregations), A2 (fixed C in {2,6,10}) | `run_analysis --h1-agg max`, `A2_fixed_C_mean_agg` in `clean.json` | `test_eligibility_uses_fp32_run_and_A1_A2` | OK: `--agg A1_full_max|A1_mean` (h2/h3), `--fixed-c 2|6|10` (h1/h2/h3), taus recomputed per variant; test `test_h2_h3_A1_A2_variants` |
+| 26 | §7 G1' (vi) Wilson lower bound > 50% | `P.wilson` | `test_strata_proxy_t1_wilson` | OK |
+| 27 | §2 per-model tau_m for M0r and B1/B2/B3 | `clean_stage`, `p4_clean_analysis.py` | e2e | OK |
+| 28 | §1 same precision/commit for every contrast | run meta (precision, n_gpus, bundle info) | — | MANUAL (verify meta.json `precision`/`repo_head` match across runs before analysis; `run_analysis.run_meta_check` aborts on precision/n_gpus (per model) or repo_head (global) mismatch, writes `meta_check.json`, `--allow-meta-mismatch` records instead; tests `test_run_meta_check_*`. Caveat: kernel groups built at different commits will trip repo_head; lead decides) |
+| 29 | §6 H3 M0r degenerate (97–99% ties) disclosure; between-video SD of S relative to M1 | `p4_clean_analysis.py` | smoke on P2 data | OK |
+
+## Gaps fixed by this audit
+Tie-half H1 with seed-averaged y/flip; exact sign test; Holm-14 with paired flip-vs-floor test; new H1 decision rule; event-aligned H2 aggregation; tie-tolerant AUROC and foil accuracy; D vs B1 and B2 intersection-union; A0, R; detection-limited outcome; H3 (a)/(b) and M0r difference; G2 per prereg; T1; strata; label-free t*_off and exclusions; eligibility on the P2 fp32 run; retention file; A2 per-C table.
+
+## Open gaps (not blocking)
+M2/M1 same-row classification and DECISIONS logging of M2 H1 status (manual); H1/H3 strata (descriptive, not emitted). H3 pairwise-accuracy secondary now uses the mean-aggregation tau.

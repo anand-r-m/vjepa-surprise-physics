@@ -1,0 +1,106 @@
+# Strength table from IntPhys 2 Debug calibration (scripts/calibrate_debug.py).
+# blur/JPEG/noise: mean SSIM 0.95/0.85/0.70; brightness: mean |dL*| 5/10/20; crop scale kept 0.9/0.8/0.7 (rule).
+# Registry units on 288-px (dev native) frames. Copied to configs/edit_params.yaml (sha256 in notes/CALIBRATION.md); the placeholder table is in git history.
+# Specificity amounts are placeholders (per-pair matched later).
+levels:
+- 0
+- 1
+- 2
+- 3
+edits:
+  brightness:
+    kind: invariance
+    unit: relative gain; also per-channel colour gain jitter of +-amount/2
+    amounts:
+    - 0.0
+    - 0.0769
+    - 0.1545
+    - 0.3397
+  blur:
+    kind: invariance
+    unit: gaussian sigma (px)
+    amounts:
+    - 0.0
+    - 0.9201
+    - 1.8449
+    - 5.1346
+  jpeg:
+    kind: invariance
+    unit: 'quality drop: quality=100-amount'
+    amounts:
+    - 0.0
+    - 37.0
+    - 86.0
+    - 97.0
+  noise:
+    kind: invariance
+    unit: gaussian sigma on 0-255 scale
+    amounts:
+    - 0.0
+    - 2.3897
+    - 4.5227
+    - 7.42
+  zoom:
+    kind: invariance
+    unit: fraction of side removed by centre crop, then resized back
+    amounts:
+    - 0.0
+    - 0.1
+    - 0.2
+    - 0.3
+  hflip:
+    kind: invariance
+    unit: 0 = off, >0 = flip
+    amounts:
+    - 0.0
+    - 1.0
+    - 1.0
+    - 1.0
+  fps_halve:
+    kind: invariance
+    unit: "not a frame edit; amount>0 doubles the native sampling stride (amend.sampling_plan(halve=True)); frame duplication is prohibited"
+    amounts:
+    - 0.0
+    - 1.0
+    - 1.0
+    - 1.0
+  lighting_step:
+    kind: specificity
+    unit: persistent relative brightness gain from t*
+    amounts:
+    - 0.0
+    - 0.1
+    - 0.25
+    - 0.5
+  camera_jolt:
+    kind: specificity
+    unit: persistent crop-window shift in px from t*, random direction
+    amounts:
+    - 0.0
+    - 2.0
+    - 5.0
+    - 10.0
+  sudden_zoom:
+    kind: specificity
+    unit: persistent crop fraction removed from t*
+    amounts:
+    - 0.0
+    - 0.05
+    - 0.1
+    - 0.2
+  vflip:
+    kind: positive
+    unit: 0 = off, >0 = vertical flip of whole clip
+    amounts:
+    - 0.0
+    - 1.0
+    - 1.0
+    - 1.0
+  time_reversal:
+    kind: positive
+    unit: 0 = off, >0 = reverse time
+    amounts:
+    - 0.0
+    - 1.0
+    - 1.0
+    - 1.0

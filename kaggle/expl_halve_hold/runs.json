@@ -1,0 +1,22 @@
+{
+ "group": "expl_halve_hold",
+ "dev_dataset": "intphys-dev-npz",
+ "runs": [
+  {
+   "run_id": "EXPL_M1_ipdev_halve_hold-high_s1",
+   "edit": {
+    "name": "halve_hold",
+    "strength": "high"
+   },
+   "seed": 1,
+   "members": "all",
+   "store_feats": false,
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "precision": "fp16",
+   "n_gpus": 2,
+   "model": "M1",
+   "baselines": true
+  }
+ ]
+}

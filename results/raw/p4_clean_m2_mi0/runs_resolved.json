@@ -1,0 +1,1 @@
+{"group": "p4_clean_m2_mi0", "dev_dataset": "intphys-dev-npz", "runs": [{"run_id": "P4_M2_ipdev_clean-mi0_s1", "model": "M2", "dataset": "ipdev", "frame_step": 2, "edit": null, "seed": 1, "members": "all", "baselines": true, "store_feats": true, "precision": "fp16", "n_gpus": 2}], "dev_path": "/kaggle/input/datasets/anandrodriguezmenon/intphys-dev-npz", "ip2_path": null}

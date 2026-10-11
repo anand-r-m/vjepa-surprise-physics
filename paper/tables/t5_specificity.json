@@ -1,0 +1,56 @@
+{
+ "item": "T5",
+ "script": "scripts/figs/t5_specificity.py",
+ "outputs": [
+  "paper/tables/t5_specificity.tex"
+ ],
+ "generated": "2026-10-11",
+ "verified_keys_used": {
+  "h2.M1.A": "verified",
+  "h2.M1.A.jolt_base": "verified",
+  "h2.M1.A.lighting_global": "verified",
+  "h2.M1.A.lighting_local": "verified",
+  "h2.M1.A.zoom_base": "verified",
+  "h2.M1.A0": "verified",
+  "h2.M1.A_B1": "verified",
+  "h2.M1.A_B2": "verified",
+  "h2.M1.A_nolg": "verified",
+  "h2.M1.D_B1": "verified",
+  "h2.M1.D_B1.no_lg": "verified",
+  "h2.M1.D_B2": "verified",
+  "h2.M1.D_B2.no_lg": "verified",
+  "h2.M1.holm2_B1": "verified",
+  "h2.M1.holm2_B2": "verified",
+  "h2.M1.outcome": "verified",
+  "h2.M2.A": "verified",
+  "h2.M2.A.jolt_base": "verified",
+  "h2.M2.A.lighting_global": "verified",
+  "h2.M2.A.lighting_local": "verified",
+  "h2.M2.A.zoom_base": "verified",
+  "h2.M2.A0": "verified",
+  "h2.M2.A_nolg": "verified",
+  "h2.M2.D_B1": "verified",
+  "h2.M2.D_B1.no_lg": "verified",
+  "h2.M2.D_B2": "verified",
+  "h2.M2.D_B2.no_lg": "verified",
+  "h2.M2.holm2_B1": "verified",
+  "h2.M2.holm2_B2": "verified",
+  "h2_entries_n": "verified",
+  "h2_fallback_n": "verified",
+  "h2_lg_noop_n": "verified",
+  "h2_mi_median": "verified",
+  "h2_pairs_n": "verified",
+  "m3.*": "pending"
+ },
+ "verified_keys_missing": [],
+ "input_files": [
+  "results/VERIFIED.json",
+  "results/analysis/h2/h2.json",
+  "results/analysis/m2/h2.json"
+ ],
+ "notes": [
+  "B1/B2 CI, A0 and per-type AUROC come from results/analysis/h2/h2.json (no VERIFIED key); A itself from h2.M1.A_B1/A_B2",
+  "Pre-registered H2 outcome for M1 per VERIFIED h2.M1.outcome: Detection-limited (Not specific)",
+  "M3 not run"
+ ]
+}

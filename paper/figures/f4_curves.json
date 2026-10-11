@@ -1,0 +1,36 @@
+{
+ "item": "F4",
+ "script": "scripts/figs/f4_curves.py",
+ "outputs": [
+  "paper/figures/f4_curves.pdf"
+ ],
+ "generated": "2026-10-10",
+ "verified_keys_used": {},
+ "verified_keys_missing": [],
+ "input_files": [
+  "kaggle/h2_spec_a/matches.json",
+  "results/raw/*/results/P4_<M>_ipdev_clean*/surprise.npz, ..._<edit>-mid_s<k>/surprise.npz (via symlink dir)",
+  "results/raw/h2_spec_a/results/P4_M1_ipdev_lighting_local-mid_s1/surprise.npz",
+  "results/raw/p4_clean_m1/results/P4_M1_ipdev_clean_s1/surprise.npz"
+ ],
+ "pairs": [
+  {
+   "pair": "O1/04/p1",
+   "t_on_frame": 48,
+   "first_event_window": 5,
+   "fallback_onset": true
+  },
+  {
+   "pair": "O2/04/p1",
+   "t_on_frame": 48,
+   "first_event_window": 5,
+   "fallback_onset": true
+  },
+  {
+   "pair": "O3/07/p0",
+   "t_on_frame": 48,
+   "first_event_window": 5,
+   "fallback_onset": true
+  }
+ ]
+}

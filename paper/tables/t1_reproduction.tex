@@ -1,0 +1,26 @@
+\begin{table}[t]
+\caption{Reproduction on IntPhys dev (180 pairs, 3 blocks): pairwise accuracy in \% of the impossible video having the higher surprise (mean aggregation; tie-half = primary, strict = ties counted wrong). Published: Garrido et al.\ headline $\approx$98\%, obtained with checkpoints that are not released; the gap to our public checkpoints is unexplained and we make no reproduction claim. M1 minus B2 (paired): +4.7 pp [$-$1.1, 10.6].}
+\label{tab:t1}
+\centering\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Model & Tie-half & Strict & Published \\
+\midrule
+M1 V-JEPA ViT-L, fp32 & 81.7 & 80.6 & $\approx$98$^{\rm a}$ \\
+M1 V-JEPA ViT-L, fp16 & 80.8 & 81.1 & -- \\
+M1H V-JEPA ViT-H (diagn.)$^{\rm b}$ & 88.3 & 87.8 & -- \\
+M2 V-JEPA 2 ViT-L & 60.8 & 60.6 & -- \\
+M3 VideoMAE V2 & \multicolumn{2}{c}{\textit{not run}} & -- \\
+M0r random init (3) & 50.0 & 50.2 & expected $\approx$50 \\
+B1 frame difference & 58.1 & 57.2 & expected $\approx$50 \\
+B2 copy-last-frame & 76.1 & 76.1 & -- \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Superseded, disclosure only (not the M2 number)}} \\
+M2 old run (mask idx 1)$^{\rm c}$ & 46.9 & 46.7 & -- \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}
+
+\raggedright\scriptsize $^{\rm a}$Literature value, not our run. $^{\rm b}$Prereg-tau tie-half 88.3; the 88.1 in the pre-registration text is the superseded fixed-$\tau$ figure (strict 87.8). $^{\rm c}$Wrapper deviation (query mask index 1), excluded from every M2 contrast.
+\end{table}

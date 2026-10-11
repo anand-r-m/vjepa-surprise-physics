@@ -1,0 +1,19 @@
+{
+ "group": "p2_vith",
+ "dev_dataset": "intphys-dev-npz",
+ "note": "G1 attempt 2: public original V-JEPA ViT-H/16 through the identical pipeline",
+ "runs": [
+  {
+   "run_id": "P2H_M1H_ipdev_clean_s1",
+   "model": "M1H",
+   "dataset": "ipdev",
+   "frame_step": 2,
+   "edit": null,
+   "seed": 1,
+   "baselines": false,
+   "store_feats": false,
+   "precision": "fp16",
+   "n_gpus": 2
+  }
+ ]
+}

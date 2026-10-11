@@ -1,0 +1,13 @@
+[1] O1/01/2 dev=cuda:0 windows=17 S[min,mean,max]=(0.5405,0.5625,0.6074) elapsed=5.9s
+[2] O1/01/1 dev=cuda:0 windows=17 S[min,mean,max]=(0.5364,0.5602,0.6074) elapsed=10.8s
+[3] O1/01/4 dev=cuda:0 windows=17 S[min,mean,max]=(0.5345,0.5583,0.6073) elapsed=15.7s
+[4] O1/01/3 dev=cuda:0 windows=17 S[min,mean,max]=(0.5369,0.5620,0.6073) elapsed=20.7s
+[5] O2/01/1 dev=cuda:0 windows=17 S[min,mean,max]=(0.5352,0.5601,0.6052) elapsed=25.7s
+[6] O2/01/3 dev=cuda:0 windows=17 S[min,mean,max]=(0.5352,0.5611,0.6052) elapsed=30.8s
+[7] O2/01/2 dev=cuda:0 windows=17 S[min,mean,max]=(0.5355,0.5613,0.6045) elapsed=35.9s
+[8] O2/01/4 dev=cuda:0 windows=17 S[min,mean,max]=(0.5355,0.5608,0.6045) elapsed=41.0s
+[9] O3/01/4 dev=cuda:0 windows=17 S[min,mean,max]=(0.5248,0.5456,0.5720) elapsed=46.2s
+[10] O3/01/1 dev=cuda:0 windows=17 S[min,mean,max]=(0.5299,0.5471,0.5716) elapsed=51.5s
+[11] O3/01/3 dev=cuda:0 windows=17 S[min,mean,max]=(0.5293,0.5464,0.5699) elapsed=56.7s
+[12] O3/01/2 dev=cuda:0 windows=17 S[min,mean,max]=(0.5248,0.5461,0.5701) elapsed=62.1s
+done P2D2_M1_dev12_fp16_1gpu_A_s1 n=12 wall=62.1s model=60.2s

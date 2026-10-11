@@ -1,0 +1,47 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{graphicx,amsmath,amssymb,booktabs,xcolor,etoolbox}
+\newcommand{\need}[1]{\textcolor{red}{[NEED NUMBER: #1]}}
+\newcommand{\num}[1]{\textcolor{orange}{[\detokenize{#1}]}}
+\newcommand{\chk}[1]{\textcolor{blue}{[CHECK: #1]}}
+\newcommand{\prereg}[1]{\textcolor{violet}{[PREREG: #1]}}
+\newcommand{\IfFig}[2]{\IfFileExists{#1}{\includegraphics[width=\linewidth]{#1}}{\fbox{\parbox{0.9\linewidth}{\centering #2}}}}
+\newif\ifsupp\suppfalse % supplement is a separate target: tectonic supp.tex (supp.tex defines \buildsupp and inputs this file)
+\ifdefined\buildsupp\supptrue\fi
+\ifsupp
+\makeatletter
+\newlabel{tab:t1}{{I}{1}}\newlabel{tab:t2}{{II}{1}}\newlabel{fig:f2}{{2}{1}}
+\newlabel{sec:discussion}{{V}{1}}\newlabel{sec:method}{{III}{1}}\newlabel{sec:deviations}{{III-F}{1}}
+\makeatother
+\renewcommand{\thesection}{S-\Roman{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\title{Supplementary Material for Impossible or Just Unexpected? Testing What the Surprise of a Public V-JEPA Checkpoint Detects}
+\else
+\title{Impossible or Just Unexpected? Testing What the Surprise of a Public V-JEPA Checkpoint Detects}
+\fi
+\author{\IEEEauthorblockN{Anand Rodriguez Menon}\IEEEauthorblockA{Department of Computer Science and Engineering\\Amrita Vishwa Vidyapeetham, Amritapuri, India\\am.sc.u4cse25025@am.students.amrita.edu}}
+\begin{document}
+\ifsupp
+\maketitle
+\input{sections/06_supplement}
+\else
+\maketitle
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+\begin{IEEEkeywords}
+intuitive physics, world models, V-JEPA, violation of expectation, video understanding
+\end{IEEEkeywords}
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_method}
+\input{sections/04_results}
+\input{sections/05_discussion}
+\fi
+\ifsupp\else
+% AUTHOR TO WRITE: AI-use disclosure / Acknowledgements section goes here (left blank on purpose).
+
+\noindent\textbf{Reproducibility.} The design was frozen at commit \texttt{ee63aee}; inference ran on Kaggle GPUs in fp16 with an fp32 check. Per-video surprise arrays and analysis code will be released, not videos. \textcolor{red}{[CODE URL: authors]}
+\IfFileExists{refs.bib}{\bibliographystyle{IEEEtran}{\footnotesize\bibliography{refs}}}{\bibliographystyle{IEEEtran}\bibliography{refs_writer_stub}}
+\fi
+\end{document}
