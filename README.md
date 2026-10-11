@@ -20,6 +20,6 @@ Code, pre-registration, analysis outputs and verification scripts for the ESCI 2
 The pre-registration was frozen at commit `ee63aee` (tag `prereg-frozen`) in the original development repository. That history is not published here, because it contains a large checkpoint file. This folder is a snapshot of the final state. Commit hashes quoted in `results/` and the paper refer to that development repository.
 
 ## Licence
-Add a licence file of your choice before publishing.
+Code: MIT (see `LICENSE`). IntPhys videos and model weights keep their own licences and are not included.
 
 Note: the frozen `docs/PREREGISTRATION.md` is reproduced unchanged and so refers to project-management files (`state/`, `reviews/`) that are not part of this release.
