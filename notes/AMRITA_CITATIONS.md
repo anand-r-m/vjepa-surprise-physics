@@ -279,3 +279,22 @@ Reviewer remarks to keep honest: (a) a referee will see #2, #3, #4, #7 as paddin
 ### Count
 
 Strict ACCEPT (no rewrite needed): 0. ACCEPT-WITH-REWRITE: 7 (#1-#7), of which #5 is conditional on a human reading the abstract and #6 is a self-citation. REJECT: 0. Six Amrita citations are therefore available (#1, #2, #3, #4, #6 plus #5 after the abstract check, with #7 as spare), but only #1 does real argumentative work.
+
+---
+
+## Scopus check
+
+Date: 2026-10-11. Primary evidence: Elsevier's official "Scopus Source title list", file `ext_list_Sep_2026.xlsx`, linked from https://www.elsevier.com/products/scopus/content (direct file: https://downloads.ctfassets.net/o78em1y1w4i4/7xtaTxNiNcWRTeZkV86eNy/e6b17b29beaf8d18175591a4e8dee0bf/ext_list_Sep_2026.xlsx). I searched sheet "Scopus Sources Sep. 2026" (journals), "Discontinued Titles Sep. 2026" (none of our journals appear there) and "All Conf. Proceedings Jun. 2026" (proceedings volumes). SCImago and scopus.com source pages are blocked (Cloudflare / login redirect), so they were not used. Wikidata (P1156) agrees on the source IDs. Limit: the list proves the SOURCE is currently indexed; it does not list individual papers, and a per-paper check needs a Scopus login (search DOI in Scopus). So source = CONFIRMED, individual paper = LIKELY for every row. Conference proceedings are indexed volume by volume, and both volumes are present.
+
+| Key | Source | Scopus status of source | Coverage / entry in list | Source ID (list) | Paper-level | Overall |
+|---|---|---|---|---|---|---|
+| veetil2024 | Digital Signal Processing (ISSN 1051-2004), title in list: "Digital Signal Processing: A Review Journal" | Active | 1991-2026, Articles in Press included | 24306 | not checked (no login); 2024 is inside coverage | LIKELY (source CONFIRMED) |
+| koushik2025 | IEEE Access (ISSN 2169-3536) | Active | 2013-2026, Articles in Press included | 21100374601 | not checked; Dec 2024 online / vol 13 2025 inside coverage | LIKELY (source CONFIRMED) |
+| kandacharam2025 | Journal of Visualized Experiments (ISSN 1940-087X) | Active, not in the Discontinued sheet | 2006-2026 (Medline-sourced title) | 19900191993 | not checked; 2025 inside coverage | LIKELY (source CONFIRMED active). JoVE is NOT discontinued: coverage runs to 2026. Caveat: Medline-sourced titles are sometimes indexed in Scopus via Medline, so paper-level presence is the one worth a manual DOI search (10.3791/68731) |
+| amrutha2020 | 2nd Int. Conf. Innovative Mechanisms for Industry Applications, ICIMIA 2020 (IEEE) | Proceedings volume present in "All Conf. Proceedings Jun. 2026" | ISBN 9781728141671, year 2020, publisher IEEE | list EID 85084559682 | not checked | LIKELY (volume CONFIRMED in Scopus) |
+| randieri2025 | Drones (MDPI, ISSN 2504-446X) | Active | 2017-2026 | 21101017244 | not checked; MDPI page also says indexed in Scopus (search hit, secondary) | LIKELY (source CONFIRMED) |
+| jayaprasad2025 | 5th Int. Conf. Evolutionary Computing and Mobile Sustainable Networks, ICECMSN 2025 (IEEE) | Proceedings volume present ("Proceedings of 5th International Conference on Evolutionary Computing and Mobile Sustainable Networks, ICECMSN 2025") | ISBN 9798331582425, year 2025, publisher IEEE | list EID 10503554244 | not checked | LIKELY (volume CONFIRMED in Scopus). Note: the 2023 and 2024 editions went through Elsevier Procedia Computer Science; the 2025 edition is the IEEE volume and is listed separately |
+
+Nothing is UNCONFIRMED at source level. To upgrade any row from LIKELY to CONFIRMED, the human (with university Scopus access) searches the DOI, e.g. `DOI(10.3791/68731)`, and notes the EID. Highest-priority manual checks: kandacharam2025 (JoVE) and the two IEEE conference papers (Scopus sometimes lags a few months after a proceedings volume appears; jayaprasad2025 is the newest, published Feb 2026).
+
+Replacements: none needed, so none searched. Spares still unusable for this requirement: anjali2026 (IEEE Open Journal of the Computer Society; abstract unverifiable; Scopus status not checked, and I did not look it up), anjali2025 (affiliation unconfirmed). If a replacement is ever required, randieri2025 is already in the set and is Scopus-source CONFIRMED.
